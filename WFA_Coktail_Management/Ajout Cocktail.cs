@@ -16,5 +16,10 @@ namespace WFA_Coktail_Management
         {
             InitializeComponent();
         }
+
+        private void lblDifficulty_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
