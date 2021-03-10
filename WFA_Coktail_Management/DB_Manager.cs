@@ -38,6 +38,12 @@ namespace WFA_Coktail_Management
             using (SqlConnection sqlConnection = getConnection())
             {
                 string sql = "createCategory";
+                SqlCommand sqlCommand = new SqlCommand(sql, sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.Add("@Category", SqlDbType.VarChar, 50);
+                sqlCommand.Parameters["@Category"].Value = categoryName;
+                sqlConnection.Open();
+                sqlCommand.ExecuteNonQuery();
             }
         }
 
