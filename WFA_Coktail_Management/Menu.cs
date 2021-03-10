@@ -16,5 +16,29 @@ namespace WFA_Coktail_Management
         {
             InitializeComponent();
         }
+
+        private void ajoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form myform = new ();
+            myform.ShowDialog();
+        }
+
+        private void modifierDétruireToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form myform = new Modifier_Détruire_Cocktail();
+            myform.ShowDialog();
+        }
+
+        private void ajoutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form myform = new Ajout_Catégorie();
+            myform.ShowDialog();
+        }
+
+        private void modifierDétruireToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form myform = new Modifier_Détruire_Catégorie();
+            myform.ShowDialog();
+        }
     }
 }
