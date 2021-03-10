@@ -35,7 +35,10 @@ namespace WFA_Coktail_Management
 
         public void create_Category(string categoryName)
         {
-
+            using (SqlConnection sqlConnection = getConnection())
+            {
+                string sql
+            }
         }
 
         public SqlDataReader list_Cocktail_Category(string choice="Cocktail")
