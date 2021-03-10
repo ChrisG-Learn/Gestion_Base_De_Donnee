@@ -83,8 +83,17 @@
     <EmbeddedResource Include="Ajout Cocktail.resx">
       <DependentUpon>Ajout Cocktail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ajout_Catégorie.resx">
+      <DependentUpon>Ajout_Catégorie.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modifier_Détruire_Catégorie.resx">
+      <DependentUpon>Modifier_Détruire_Catégorie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modifier_Détruire_Cocktail.resx">
+      <DependentUpon>Modifier_Détruire_Cocktail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

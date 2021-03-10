@@ -41,6 +41,7 @@ namespace WFA_Coktail_Management
             this.cmbCategory = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -191,5 +192,6 @@ namespace WFA_Coktail_Management
         private System.Windows.Forms.ComboBox cmbCategory;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnAdd;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
