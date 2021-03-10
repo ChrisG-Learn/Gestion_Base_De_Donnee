@@ -14,7 +14,7 @@ namespace WFA_Coktail_Management
         {
             using (SqlConnection connection = getConnection())
             {
-                string sql= "createCocktail" ;
+                string sql = "createCocktail";
                 SqlCommand sqlCommand = new SqlCommand(sql, connection);
 
                 sqlCommand.CommandType = CommandType.StoredProcedure;
@@ -37,7 +37,7 @@ namespace WFA_Coktail_Management
         {
             using (SqlConnection sqlConnection = getConnection())
             {
-                string sql
+                string sql = "createCategory";
             }
         }
 
