@@ -136,6 +136,7 @@ namespace WFA_Coktail_Management
             this.Controls.Add(this.lblList);
             this.Name = "Modifier_Détruire_Catégorie";
             this.Text = "Modifier_Détruire_Catégorie";
+            this.Load += new System.EventHandler(this.Modifier_Détruire_Catégorie_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
