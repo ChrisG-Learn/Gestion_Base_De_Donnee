@@ -13,7 +13,7 @@ namespace WFA_Coktail_Management
 {
     public partial class Modifier_Détruire_Catégorie : Form
     {
-        Utility utility = new Utility();
+        
 
         public Modifier_Détruire_Catégorie()
         {
@@ -22,15 +22,9 @@ namespace WFA_Coktail_Management
         }
         private void Modifier_Détruire_Catégorie_Load(object sender, EventArgs e)
         {
+            Utility utility = new Utility();
             utility.FillCmbChoice(cmbChoice);
         }
-
-
-
-
-
-
-
 
         private void label1_Click(object sender, EventArgs e)
         {

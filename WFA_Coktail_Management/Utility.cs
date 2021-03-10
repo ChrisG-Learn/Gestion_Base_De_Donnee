@@ -12,18 +12,20 @@ namespace WFA_Coktail_Management
     class Utility
     {
 
-        public void FillCmbChoice(ComboBox Cmb)
+        public void FillCmbChoice(ComboBox cmb)
         {
             DB_Manager db_Manager = new DB_Manager();
             BindingSource Bs = new BindingSource();
-            using (SqlDataReader Dr = db_Manager.list_Cocktail_Category("0"))
+            string choice = "Category";
+            using (SqlDataReader Dr = db_Manager.list_Cocktail_Category(choice))
             {
                 Bs.DataSource = Dr;
-                Cmb.ValueMember = "category_Id";
-                Cmb.DisplayMember = "category";
-                Cmb.DataSource = Bs;
+                cmb.ValueMember = "category_Id";
+                cmb.DisplayMember = "info";
+                cmb.DataSource = Bs;
             }
+            cmb.DropDownStyle = ComboBoxStyle.DropDownList;
         }
-
+        
     }
 }

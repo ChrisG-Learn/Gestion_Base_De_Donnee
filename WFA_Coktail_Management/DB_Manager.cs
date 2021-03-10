@@ -47,21 +47,20 @@ namespace WFA_Coktail_Management
             }
         }
 
-        public SqlDataReader list_Cocktail_Category(string choice="Cocktail")
+        public SqlDataReader list_Cocktail_Category(string choice)
         {
-            using (SqlConnection sqlConnection = getConnection())
-            {
-                SqlDataReader sqlDatareader;
-                string sql;
-                if (choice == "Cocktail")
-                    sql = "SELECT cocktail_Id, cocktail_name, difficulty_level, quotation, category_Id FROM tbl_cocktail ORDER BY cocktail_name"; 
-                else
-                    sql = "SELECT category_Id, category FROM tbl_category ORDER BY category"; 
-                SqlCommand sqlCommand = new SqlCommand(sql, sqlConnection);
-                sqlConnection.Open();
-                sqlDatareader = sqlCommand.ExecuteReader(CommandBehavior.CloseConnection);
-                return sqlDatareader;
-            }
+            SqlConnection sqlConnection = getConnection();
+            SqlDataReader sqlDatareader;
+            string sql;
+            if (choice == "Cocktail")
+                sql = "SELECT cocktail_Id, cocktail_name, difficulty_level, quotation, category_Id FROM tbl_cocktail ORDER BY cocktail_name";
+            else
+                sql = "SELECT category_Id, category AS 'info' FROM tbl_category ORDER BY category";
+            SqlCommand sqlCommand = new SqlCommand(sql, sqlConnection);
+            sqlConnection.Open();
+            sqlDatareader = sqlCommand.ExecuteReader(CommandBehavior.CloseConnection);
+            return sqlDatareader;
+
         }
 
         public SqlDataReader get_Information(int ID, string choice= "Cocktail")
