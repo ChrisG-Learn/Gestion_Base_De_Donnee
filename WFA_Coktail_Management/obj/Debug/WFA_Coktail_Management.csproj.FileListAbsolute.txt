@@ -1,0 +1,14 @@
+C:\Users\sacha\OneDrive\Documents\GitHub\Gestion_Base_De_Donnee\WFA_Coktail_Management\obj\Debug\WFA_Coktail_Management.csprojAssemblyReference.cache
+C:\Users\sacha\OneDrive\Documents\GitHub\Gestion_Base_De_Donnee\WFA_Coktail_Management\obj\Debug\WFA_Coktail_Management.Form1.resources
+C:\Users\sacha\OneDrive\Documents\GitHub\Gestion_Base_De_Donnee\WFA_Coktail_Management\obj\Debug\WFA_Coktail_Management.Ajout_Catégorie.resources
+C:\Users\sacha\OneDrive\Documents\GitHub\Gestion_Base_De_Donnee\WFA_Coktail_Management\obj\Debug\WFA_Coktail_Management.Menu.resources
+C:\Users\sacha\OneDrive\Documents\GitHub\Gestion_Base_De_Donnee\WFA_Coktail_Management\obj\Debug\WFA_Coktail_Management.Modifier_Détruire_Catégorie.resources
+C:\Users\sacha\OneDrive\Documents\GitHub\Gestion_Base_De_Donnee\WFA_Coktail_Management\obj\Debug\WFA_Coktail_Management.Modifier_Détruire_Cocktail.resources
+C:\Users\sacha\OneDrive\Documents\GitHub\Gestion_Base_De_Donnee\WFA_Coktail_Management\obj\Debug\WFA_Coktail_Management.Properties.Resources.resources
+C:\Users\sacha\OneDrive\Documents\GitHub\Gestion_Base_De_Donnee\WFA_Coktail_Management\obj\Debug\WFA_Coktail_Management.csproj.GenerateResource.cache
+C:\Users\sacha\OneDrive\Documents\GitHub\Gestion_Base_De_Donnee\WFA_Coktail_Management\obj\Debug\WFA_Coktail_Management.csproj.CoreCompileInputs.cache
+C:\Users\sacha\OneDrive\Documents\GitHub\Gestion_Base_De_Donnee\WFA_Coktail_Management\bin\Debug\WFA_Coktail_Management.exe.config
+C:\Users\sacha\OneDrive\Documents\GitHub\Gestion_Base_De_Donnee\WFA_Coktail_Management\bin\Debug\WFA_Coktail_Management.exe
+C:\Users\sacha\OneDrive\Documents\GitHub\Gestion_Base_De_Donnee\WFA_Coktail_Management\bin\Debug\WFA_Coktail_Management.pdb
+C:\Users\sacha\OneDrive\Documents\GitHub\Gestion_Base_De_Donnee\WFA_Coktail_Management\obj\Debug\WFA_Coktail_Management.exe
+C:\Users\sacha\OneDrive\Documents\GitHub\Gestion_Base_De_Donnee\WFA_Coktail_Management\obj\Debug\WFA_Coktail_Management.pdb

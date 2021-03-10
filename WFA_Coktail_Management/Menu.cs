@@ -19,7 +19,7 @@ namespace WFA_Coktail_Management
 
         private void ajoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form myform = new ();
+            Form myform = new Ajout_Cocktail();
             myform.ShowDialog();
         }
 

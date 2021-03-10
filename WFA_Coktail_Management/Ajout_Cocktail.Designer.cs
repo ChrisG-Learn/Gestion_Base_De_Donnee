@@ -1,7 +1,7 @@
 ﻿
 namespace WFA_Coktail_Management
 {
-    partial class Form1
+    partial class Ajout_Cocktail
     {
         /// <summary>
         /// Required designer variable.
@@ -172,6 +172,7 @@ namespace WFA_Coktail_Management
             this.Controls.Add(this.lblName);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

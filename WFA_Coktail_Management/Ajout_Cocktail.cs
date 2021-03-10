@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace WFA_Coktail_Management
 {
-    public partial class Form1 : Form
+    public partial class Ajout_Cocktail : Form
     {
-        public Form1()
+        public Ajout_Cocktail()
         {
             InitializeComponent();
         }
 
         private void lblDifficulty_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
