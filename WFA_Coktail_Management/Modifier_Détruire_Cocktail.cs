@@ -16,5 +16,16 @@ namespace WFA_Coktail_Management
         {
             InitializeComponent();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Modifier_Détruire_Cocktail_Load(object sender, EventArgs e)
+        {
+            Utility utility = new Utility();
+            utility.fill_CmbCocktail(cmbCocktail);
+        }
     }
 }

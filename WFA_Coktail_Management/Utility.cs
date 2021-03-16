@@ -12,7 +12,7 @@ namespace WFA_Coktail_Management
     class Utility
     {
 
-        public void FillCmbChoice(ComboBox cmb)
+        public void Fill_CmbCategory(ComboBox cmb)
         {
             DB_Manager db_Manager = new DB_Manager();
             BindingSource Bs = new BindingSource();
@@ -27,5 +27,19 @@ namespace WFA_Coktail_Management
             cmb.DropDownStyle = ComboBoxStyle.DropDownList;
         }
         
+        public void fill_CmbCocktail(ComboBox cmb)
+        {
+            DB_Manager dB_Manager = new DB_Manager();
+            BindingSource bindingSource = new BindingSource();
+            string choice = "Cocktail";
+            using (SqlDataReader sqlDataReader = dB_Manager.list_Cocktail_Category(choice))
+            {
+                bindingSource.DataSource = sqlDataReader;
+                cmb.ValueMember = "cocktail_Id";
+                cmb.DisplayMember = "info";
+                cmb.DataSource = bindingSource;
+            }
+            cmb.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
     }
 }

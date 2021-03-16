@@ -53,7 +53,7 @@ namespace WFA_Coktail_Management
             SqlDataReader sqlDatareader;
             string sql;
             if (choice == "Cocktail")
-                sql = "SELECT cocktail_Id, cocktail_name, difficulty_level, quotation, category_Id FROM tbl_cocktail ORDER BY cocktail_name";
+                sql = "SELECT cocktail_Id, cocktail_name AS 'info', difficulty_level, quotation, category_Id FROM tbl_cocktail ORDER BY cocktail_name";
             else
                 sql = "SELECT category_Id, category AS 'info' FROM tbl_category ORDER BY category";
             SqlCommand sqlCommand = new SqlCommand(sql, sqlConnection);
@@ -65,18 +65,18 @@ namespace WFA_Coktail_Management
 
         public SqlDataReader get_Information(int ID, string choice)
         {
-            using (SqlConnection sqlConnection = getConnection())
-            {
-                string sql;
-                if (choice == "Cocktail")
-                    sql = "SELECT cocktail_name, difficulty_level, quotation, category_Id, cocktail_Id FROM  tbl_cocktail WHERE cocktail_ID = " + ID;
-                else
-                    sql = "SELECT category_Id, category FROM tbl_category WHERE category_Id = " + ID;
-                SqlCommand sqlCommand = new SqlCommand(sql, sqlConnection);
-                sqlConnection.Open();
-                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader(CommandBehavior.CloseConnection);
-                return sqlDataReader;
-            }
+            SqlConnection sqlConnection = getConnection();
+
+            string sql;
+            if (choice == "Cocktail")
+                sql = "SELECT cocktail_name, difficulty_level, quotation, category_Id, cocktail_Id FROM  tbl_cocktail WHERE cocktail_ID = " + ID;
+            else
+                sql = "SELECT category_Id, category FROM tbl_category WHERE category_Id = " + ID;
+            SqlCommand sqlCommand = new SqlCommand(sql, sqlConnection);
+            sqlConnection.Open();
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader(CommandBehavior.CloseConnection);
+            return sqlDataReader;
+
         }
 
         public void modify_Cocktail(string name, string difficulty, int quotation, int category, int ID)
