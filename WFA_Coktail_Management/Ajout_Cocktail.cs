@@ -33,7 +33,6 @@ namespace WFA_Coktail_Management
                 cmbQuotation.Items.Add(i);
             }
         }
-
         private string categoryChecked()
         {
             if (rdbMinuteCockatailAdd.Checked == true && rdbStunningAdd.Checked == false && rdbForCuriousAdd.Checked == false)
@@ -58,7 +57,7 @@ namespace WFA_Coktail_Management
         private void btnAdd_Click(object sender, EventArgs e)
         {
             DB_Manager dB_Manager = new DB_Manager();
-            DB_Manager.create_Cocktail(txtName.Text, categoryChecked().ToString(), int.Parse(cmbQuotation.SelectedItem.ToString()), int.Parse(cmbCategory.ValueMember.ToString()));
+            dB_Manager.create_Cocktail(txtName.Text, categoryChecked().ToString(), int.Parse(cmbQuotation.SelectedItem.ToString()), int.Parse(cmbCategory.ValueMember.ToString()));
         }
     }
 }

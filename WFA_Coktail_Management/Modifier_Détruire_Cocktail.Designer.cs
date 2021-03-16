@@ -31,6 +31,9 @@ namespace WFA_Coktail_Management
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdbForCurious = new System.Windows.Forms.RadioButton();
+            this.rdbStunning = new System.Windows.Forms.RadioButton();
+            this.rdbMinuteCocktail = new System.Windows.Forms.RadioButton();
             this.cmbCocktail = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -41,9 +44,6 @@ namespace WFA_Coktail_Management
             this.lblDifficulty = new System.Windows.Forms.Label();
             this.lblQuotation = new System.Windows.Forms.Label();
             this.lblCategory = new System.Windows.Forms.Label();
-            this.rdbMinuteCocktail = new System.Windows.Forms.RadioButton();
-            this.rdbStunning = new System.Windows.Forms.RadioButton();
-            this.rdbForCurious = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +68,39 @@ namespace WFA_Coktail_Management
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
+            // rdbForCurious
+            // 
+            this.rdbForCurious.AutoSize = true;
+            this.rdbForCurious.Location = new System.Drawing.Point(31, 79);
+            this.rdbForCurious.Name = "rdbForCurious";
+            this.rdbForCurious.Size = new System.Drawing.Size(130, 21);
+            this.rdbForCurious.TabIndex = 2;
+            this.rdbForCurious.TabStop = true;
+            this.rdbForCurious.Text = "Pour les curieux";
+            this.rdbForCurious.UseVisualStyleBackColor = true;
+            // 
+            // rdbStunning
+            // 
+            this.rdbStunning.AutoSize = true;
+            this.rdbStunning.Location = new System.Drawing.Point(31, 52);
+            this.rdbStunning.Name = "rdbStunning";
+            this.rdbStunning.Size = new System.Drawing.Size(78, 21);
+            this.rdbStunning.TabIndex = 1;
+            this.rdbStunning.TabStop = true;
+            this.rdbStunning.Text = "Épatant";
+            this.rdbStunning.UseVisualStyleBackColor = true;
+            // 
+            // rdbMinuteCocktail
+            // 
+            this.rdbMinuteCocktail.AutoSize = true;
+            this.rdbMinuteCocktail.Location = new System.Drawing.Point(31, 25);
+            this.rdbMinuteCocktail.Name = "rdbMinuteCocktail";
+            this.rdbMinuteCocktail.Size = new System.Drawing.Size(131, 21);
+            this.rdbMinuteCocktail.TabIndex = 0;
+            this.rdbMinuteCocktail.TabStop = true;
+            this.rdbMinuteCocktail.Text = "Cocktail minutes";
+            this.rdbMinuteCocktail.UseVisualStyleBackColor = true;
+            // 
             // cmbCocktail
             // 
             this.cmbCocktail.FormattingEnabled = true;
@@ -76,7 +109,7 @@ namespace WFA_Coktail_Management
             this.cmbCocktail.Name = "cmbCocktail";
             this.cmbCocktail.Size = new System.Drawing.Size(327, 24);
             this.cmbCocktail.TabIndex = 2;
-            this.cmbCocktail.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cmbCocktail.SelectedIndexChanged += new System.EventHandler(this.cmbCocktail_SelectedIndexChanged);
             // 
             // comboBox2
             // 
@@ -105,6 +138,7 @@ namespace WFA_Coktail_Management
             this.btnCocktailModif.TabIndex = 5;
             this.btnCocktailModif.Text = "Modifier";
             this.btnCocktailModif.UseVisualStyleBackColor = true;
+            this.btnCocktailModif.Click += new System.EventHandler(this.btnCocktailModif_Click);
             // 
             // btnCocktailDestroy
             // 
@@ -160,40 +194,6 @@ namespace WFA_Coktail_Management
             this.lblCategory.Size = new System.Drawing.Size(69, 17);
             this.lblCategory.TabIndex = 11;
             this.lblCategory.Text = "Catégorie";
-            // 
-            // rdbMinuteCocktail
-            // 
-            this.rdbMinuteCocktail.AutoSize = true;
-            this.rdbMinuteCocktail.Location = new System.Drawing.Point(31, 25);
-            this.rdbMinuteCocktail.Name = "rdbMinuteCocktail";
-            this.rdbMinuteCocktail.Size = new System.Drawing.Size(131, 21);
-            this.rdbMinuteCocktail.TabIndex = 0;
-            this.rdbMinuteCocktail.TabStop = true;
-            this.rdbMinuteCocktail.Text = "Cocktail minutes";
-            this.rdbMinuteCocktail.UseVisualStyleBackColor = true;
-            // 
-            // rdbStunning
-            // 
-            this.rdbStunning.AutoSize = true;
-            this.rdbStunning.Location = new System.Drawing.Point(31, 52);
-            this.rdbStunning.Name = "rdbStunning";
-            this.rdbStunning.Size = new System.Drawing.Size(78, 21);
-            this.rdbStunning.TabIndex = 1;
-            this.rdbStunning.TabStop = true;
-            this.rdbStunning.Text = "Épatant";
-            this.rdbStunning.UseVisualStyleBackColor = true;
-            this.rdbStunning.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
-            // 
-            // rdbForCurious
-            // 
-            this.rdbForCurious.AutoSize = true;
-            this.rdbForCurious.Location = new System.Drawing.Point(31, 79);
-            this.rdbForCurious.Name = "rdbForCurious";
-            this.rdbForCurious.Size = new System.Drawing.Size(130, 21);
-            this.rdbForCurious.TabIndex = 2;
-            this.rdbForCurious.TabStop = true;
-            this.rdbForCurious.Text = "Pour les curieux";
-            this.rdbForCurious.UseVisualStyleBackColor = true;
             // 
             // Modifier_Détruire_Cocktail
             // 

@@ -17,20 +17,21 @@ namespace WFA_Coktail_Management
             InitializeComponent();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Modifier_Détruire_Cocktail_Load(object sender, EventArgs e)
         {
             Utility utility = new Utility();
             utility.fill_CmbCocktail(cmbCocktail);
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        private void btnCocktailModif_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmbCocktail_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DB_Manager dB_Manager = new DB_Manager();
+            DB_Manager.get_Information(int.Parse(cmbCocktail.SelectedIndex.ToString()) , "Cocktail");
         }
     }
 }
