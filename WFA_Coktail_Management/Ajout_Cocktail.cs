@@ -17,12 +17,43 @@ namespace WFA_Coktail_Management
             InitializeComponent();
         }
 
-        private void lblDifficulty_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-
+            Utility utility = new Utility();
+            utility.Fill_CmbCategory(cmbCategory);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void fillcmbQutation
+
+        private void categoryChecked()
+        {
+            //if ()
+            //{
+            //    rdbMinuteCockatailAdd.Checked = true;
+            //}
+            //else
+            //{
+            //    rdbMinuteCockatailAdd.Checked = false;
+            //}
+            //if ()
+            //{
+            //    rdbStunningAdd.Checked = true;
+            //}
+            //else
+            //{
+            //    rdbStunningAdd.Checked = false;
+            //}
+            //if ()
+            //{
+            //    rdbForCuriousAdd.Checked = true;
+            //}
+            //else
+            //{
+            //    rdbForCuriousAdd.Checked = false;
+            //}
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
         {
 
         }
