@@ -29,14 +29,14 @@ namespace WFA_Coktail_Management
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdbForCurious = new System.Windows.Forms.RadioButton();
             this.rdbStunning = new System.Windows.Forms.RadioButton();
             this.rdbMinuteCocktail = new System.Windows.Forms.RadioButton();
             this.cmbCocktail = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cmbQuotation = new System.Windows.Forms.ComboBox();
+            this.cmbCategory = new System.Windows.Forms.ComboBox();
             this.btnCocktailModif = new System.Windows.Forms.Button();
             this.btnCocktailDestroy = new System.Windows.Forms.Button();
             this.lblChoice = new System.Windows.Forms.Label();
@@ -47,13 +47,13 @@ namespace WFA_Coktail_Management
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(227, 76);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(291, 22);
-            this.textBox1.TabIndex = 0;
+            this.txtName.Location = new System.Drawing.Point(227, 76);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(291, 22);
+            this.txtName.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -111,23 +111,23 @@ namespace WFA_Coktail_Management
             this.cmbCocktail.TabIndex = 2;
             this.cmbCocktail.SelectedIndexChanged += new System.EventHandler(this.cmbCocktail_SelectedIndexChanged);
             // 
-            // comboBox2
+            // cmbQuotation
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(227, 244);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(291, 24);
-            this.comboBox2.TabIndex = 3;
+            this.cmbQuotation.FormattingEnabled = true;
+            this.cmbQuotation.Location = new System.Drawing.Point(227, 244);
+            this.cmbQuotation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbQuotation.Name = "cmbQuotation";
+            this.cmbQuotation.Size = new System.Drawing.Size(291, 24);
+            this.cmbQuotation.TabIndex = 3;
             // 
-            // comboBox3
+            // cmbCategory
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(227, 297);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(291, 24);
-            this.comboBox3.TabIndex = 4;
+            this.cmbCategory.FormattingEnabled = true;
+            this.cmbCategory.Location = new System.Drawing.Point(227, 297);
+            this.cmbCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbCategory.Name = "cmbCategory";
+            this.cmbCategory.Size = new System.Drawing.Size(291, 24);
+            this.cmbCategory.TabIndex = 4;
             // 
             // btnCocktailModif
             // 
@@ -207,11 +207,11 @@ namespace WFA_Coktail_Management
             this.Controls.Add(this.lblChoice);
             this.Controls.Add(this.btnCocktailDestroy);
             this.Controls.Add(this.btnCocktailModif);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cmbCategory);
+            this.Controls.Add(this.cmbQuotation);
             this.Controls.Add(this.cmbCocktail);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtName);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Modifier_Détruire_Cocktail";
             this.Text = "Modifier_Détruire";
@@ -225,11 +225,11 @@ namespace WFA_Coktail_Management
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cmbCocktail;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmbQuotation;
+        private System.Windows.Forms.ComboBox cmbCategory;
         private System.Windows.Forms.Button btnCocktailModif;
         private System.Windows.Forms.Button btnCocktailDestroy;
         private System.Windows.Forms.Label lblChoice;

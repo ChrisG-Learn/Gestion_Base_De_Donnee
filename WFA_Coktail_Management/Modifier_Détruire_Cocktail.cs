@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace WFA_Coktail_Management
 {
@@ -31,7 +32,18 @@ namespace WFA_Coktail_Management
         private void cmbCocktail_SelectedIndexChanged(object sender, EventArgs e)
         {
             DB_Manager dB_Manager = new DB_Manager();
-            DB_Manager.get_Information(int.Parse(cmbCocktail.SelectedIndex.ToString()) , "Cocktail");
+            int ID = int.Parse(cmbCocktail.SelectedValue.ToString());
+            string choice = "Cocktail";
+            using (SqlDataReader dataReader = dB_Manager.get_Information(ID, choice))
+            {
+                if (dataReader.Read())
+                {
+                    txtName.Text = dataReader["cocktail_name"].ToString();
+                    cmbQuotation.SelectedValue = dataReader["difficulty_level"].ToString();
+                    cmbCategory.SelectedValue = dataReader["quotation"].ToString();
+
+                }
+            }
         }
     }
 }
