@@ -27,5 +27,10 @@ namespace WFA_Coktail_Management
             Utility utility = new Utility();
             utility.fill_CmbCocktail(cmbCocktail);
         }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

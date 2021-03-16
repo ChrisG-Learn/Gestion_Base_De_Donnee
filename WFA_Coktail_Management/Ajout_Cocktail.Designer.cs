@@ -35,13 +35,13 @@ namespace WFA_Coktail_Management
             this.lblDifficulty = new System.Windows.Forms.Label();
             this.cmbName = new System.Windows.Forms.TextBox();
             this.cmbQutation = new System.Windows.Forms.ComboBox();
-            this.cbxMinute = new System.Windows.Forms.CheckBox();
-            this.cbxStunning = new System.Windows.Forms.CheckBox();
-            this.cbxForCurious = new System.Windows.Forms.CheckBox();
             this.cmbCategory = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.rdbMinuteCockatailAdd = new System.Windows.Forms.RadioButton();
+            this.rdbStunningAdd = new System.Windows.Forms.RadioButton();
+            this.rdbForCuriousAdd = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,36 +97,6 @@ namespace WFA_Coktail_Management
             this.cmbQutation.Size = new System.Drawing.Size(317, 24);
             this.cmbQutation.TabIndex = 6;
             // 
-            // cbxMinute
-            // 
-            this.cbxMinute.AutoSize = true;
-            this.cbxMinute.Location = new System.Drawing.Point(17, 26);
-            this.cbxMinute.Name = "cbxMinute";
-            this.cbxMinute.Size = new System.Drawing.Size(125, 21);
-            this.cbxMinute.TabIndex = 8;
-            this.cbxMinute.Text = "Cocktail Minute";
-            this.cbxMinute.UseVisualStyleBackColor = true;
-            // 
-            // cbxStunning
-            // 
-            this.cbxStunning.AutoSize = true;
-            this.cbxStunning.Location = new System.Drawing.Point(17, 53);
-            this.cbxStunning.Name = "cbxStunning";
-            this.cbxStunning.Size = new System.Drawing.Size(79, 21);
-            this.cbxStunning.TabIndex = 9;
-            this.cbxStunning.Text = "Épatant";
-            this.cbxStunning.UseVisualStyleBackColor = true;
-            // 
-            // cbxForCurious
-            // 
-            this.cbxForCurious.AutoSize = true;
-            this.cbxForCurious.Location = new System.Drawing.Point(17, 80);
-            this.cbxForCurious.Name = "cbxForCurious";
-            this.cbxForCurious.Size = new System.Drawing.Size(131, 21);
-            this.cbxForCurious.TabIndex = 10;
-            this.cbxForCurious.Text = "Pour les curieux";
-            this.cbxForCurious.UseVisualStyleBackColor = true;
-            // 
             // cmbCategory
             // 
             this.cmbCategory.FormattingEnabled = true;
@@ -137,15 +107,14 @@ namespace WFA_Coktail_Management
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cbxMinute);
-            this.groupBox1.Controls.Add(this.cbxStunning);
-            this.groupBox1.Controls.Add(this.cbxForCurious);
+            this.groupBox1.Controls.Add(this.rdbForCuriousAdd);
+            this.groupBox1.Controls.Add(this.rdbMinuteCockatailAdd);
+            this.groupBox1.Controls.Add(this.rdbStunningAdd);
             this.groupBox1.Location = new System.Drawing.Point(295, 117);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 114);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             // 
             // btnAdd
             // 
@@ -156,7 +125,40 @@ namespace WFA_Coktail_Management
             this.btnAdd.Text = "Ajouter";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // rdbMinuteCockatailAdd
+            // 
+            this.rdbMinuteCockatailAdd.AutoSize = true;
+            this.rdbMinuteCockatailAdd.Location = new System.Drawing.Point(38, 21);
+            this.rdbMinuteCockatailAdd.Name = "rdbMinuteCockatailAdd";
+            this.rdbMinuteCockatailAdd.Size = new System.Drawing.Size(124, 21);
+            this.rdbMinuteCockatailAdd.TabIndex = 14;
+            this.rdbMinuteCockatailAdd.TabStop = true;
+            this.rdbMinuteCockatailAdd.Text = "Cocktail minute";
+            this.rdbMinuteCockatailAdd.UseVisualStyleBackColor = true;
+            // 
+            // rdbStunningAdd
+            // 
+            this.rdbStunningAdd.AutoSize = true;
+            this.rdbStunningAdd.Location = new System.Drawing.Point(38, 48);
+            this.rdbStunningAdd.Name = "rdbStunningAdd";
+            this.rdbStunningAdd.Size = new System.Drawing.Size(78, 21);
+            this.rdbStunningAdd.TabIndex = 15;
+            this.rdbStunningAdd.TabStop = true;
+            this.rdbStunningAdd.Text = "Épatant";
+            this.rdbStunningAdd.UseVisualStyleBackColor = true;
+            // 
+            // rdbForCuriousAdd
+            // 
+            this.rdbForCuriousAdd.AutoSize = true;
+            this.rdbForCuriousAdd.Location = new System.Drawing.Point(38, 75);
+            this.rdbForCuriousAdd.Name = "rdbForCuriousAdd";
+            this.rdbForCuriousAdd.Size = new System.Drawing.Size(130, 21);
+            this.rdbForCuriousAdd.TabIndex = 16;
+            this.rdbForCuriousAdd.TabStop = true;
+            this.rdbForCuriousAdd.Text = "Pour les curieux";
+            this.rdbForCuriousAdd.UseVisualStyleBackColor = true;
+            // 
+            // Ajout_Cocktail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -170,7 +172,7 @@ namespace WFA_Coktail_Management
             this.Controls.Add(this.lblQuotation);
             this.Controls.Add(this.lblCategorie);
             this.Controls.Add(this.lblName);
-            this.Name = "Form1";
+            this.Name = "Ajout_Cocktail";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
@@ -187,12 +189,12 @@ namespace WFA_Coktail_Management
         private System.Windows.Forms.Label lblDifficulty;
         private System.Windows.Forms.TextBox cmbName;
         private System.Windows.Forms.ComboBox cmbQutation;
-        private System.Windows.Forms.CheckBox cbxMinute;
-        private System.Windows.Forms.CheckBox cbxStunning;
-        private System.Windows.Forms.CheckBox cbxForCurious;
         private System.Windows.Forms.ComboBox cmbCategory;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnAdd;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.RadioButton rdbForCuriousAdd;
+        private System.Windows.Forms.RadioButton rdbMinuteCockatailAdd;
+        private System.Windows.Forms.RadioButton rdbStunningAdd;
     }
 }

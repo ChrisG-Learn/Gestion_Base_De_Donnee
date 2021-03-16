@@ -12,8 +12,11 @@ namespace WFA_Coktail_Management
         protected SqlConnection getConnection()
         {
             SqlConnection Cnn = new SqlConnection();
-            Cnn.ConnectionString = "Data Source=DESKTOP-LS38A5A;Initial Catalog=SD-CG_Travail1_DB;Integrated Security=True";
+            Cnn.ConnectionString = "Data Source=LAPTOP-M4VGGB05;Initial Catalog=SD-CG_Travail1_DB;Integrated Security=True";
             return Cnn;
         }
     }
 }
+
+//DESKTOP-LS38A5A
+//LAPTOP-M4VGGB05
