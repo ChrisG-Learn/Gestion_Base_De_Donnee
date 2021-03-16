@@ -37,7 +37,6 @@ namespace WFA_Coktail_Management
             this.txtName = new System.Windows.Forms.TextBox();
             this.btnModif = new System.Windows.Forms.Button();
             this.btnDestroy = new System.Windows.Forms.Button();
-            this.btnActualise = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblList
@@ -118,24 +117,13 @@ namespace WFA_Coktail_Management
             this.btnDestroy.TabIndex = 7;
             this.btnDestroy.Text = "Détruire";
             this.btnDestroy.UseVisualStyleBackColor = true;
-            // 
-            // btnActualise
-            // 
-            this.btnActualise.Location = new System.Drawing.Point(289, 265);
-            this.btnActualise.Margin = new System.Windows.Forms.Padding(2);
-            this.btnActualise.Name = "btnActualise";
-            this.btnActualise.Size = new System.Drawing.Size(130, 40);
-            this.btnActualise.TabIndex = 8;
-            this.btnActualise.Text = "Actualiser la liste";
-            this.btnActualise.UseVisualStyleBackColor = true;
-            this.btnActualise.Click += new System.EventHandler(this.btnActualise_Click);
+            this.btnDestroy.Click += new System.EventHandler(this.btnDestroy_Click);
             // 
             // Modifier_Détruire_Catégorie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
-            this.Controls.Add(this.btnActualise);
             this.Controls.Add(this.btnDestroy);
             this.Controls.Add(this.btnModif);
             this.Controls.Add(this.txtName);
@@ -163,6 +151,5 @@ namespace WFA_Coktail_Management
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button btnModif;
         private System.Windows.Forms.Button btnDestroy;
-        private System.Windows.Forms.Button btnActualise;
     }
 }

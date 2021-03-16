@@ -27,18 +27,6 @@ namespace WFA_Coktail_Management
             cmb.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
-        public void Fill_lstCategory(ListBox lst)
-        {
-            DB_Manager db_Manager = new DB_Manager();
-            BindingSource Bs = new BindingSource();
-            string choice = "Category";
-            using (SqlDataReader Dr = db_Manager.list_Cocktail_Category(choice))
-            {
-                Bs.DataSource = Dr;
-                lst.DataSource = Bs;
-            }
-        }
-
         public void fill_CmbCocktail(ComboBox cmb)
         {
             DB_Manager dB_Manager = new DB_Manager();

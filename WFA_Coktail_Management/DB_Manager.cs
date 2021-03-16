@@ -117,5 +117,16 @@ namespace WFA_Coktail_Management
                 sqlCommand.ExecuteNonQuery();
             }
         }
+
+        public void destroy_Category(int ID)
+        {
+            using (SqlConnection sqlConnection = getConnection())
+            {
+                string sql = "DELETE FROM tbl_category WHERE category_Id = " + ID;
+                SqlCommand sqlCommand = new SqlCommand(sql, sqlConnection);
+                sqlConnection.Open();
+                sqlCommand.ExecuteNonQuery();
+            }
+        }
     }
 }
