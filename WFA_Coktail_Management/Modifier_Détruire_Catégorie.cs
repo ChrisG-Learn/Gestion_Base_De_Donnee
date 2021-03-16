@@ -22,7 +22,7 @@ namespace WFA_Coktail_Management
         }
         private void Modifier_Détruire_Catégorie_Load(object sender, EventArgs e)
         {
-            fill_Cmb();
+            fill_Cmb_List();
             btnDestroy.Enabled = false;
             btnModif.Enabled = false;
         }
@@ -52,14 +52,16 @@ namespace WFA_Coktail_Management
         {
             DB_Manager dB_Manager = new DB_Manager();
             dB_Manager.modify_Category(txtName.Text, int.Parse(cmbChoice.SelectedValue.ToString()));
-            fill_Cmb();
+            fill_Cmb_List();
             empty_TextBox();
         }
 
-        private void fill_Cmb()
+        private void fill_Cmb_List()
         {
             Utility utility = new Utility();
             utility.Fill_CmbCategory(cmbChoice);
+            lbxList.Items.Clear();
+            utility.Fill_lstCategory(lbxList);
         }
 
         private void empty_TextBox()
@@ -69,7 +71,7 @@ namespace WFA_Coktail_Management
 
         private void btnActualise_Click(object sender, EventArgs e)
         {
-            fill_Cmb();
+            fill_Cmb_List();
         }
     }
 }

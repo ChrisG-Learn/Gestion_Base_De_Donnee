@@ -43,7 +43,7 @@ namespace WFA_Coktail_Management
             // lblList
             // 
             this.lblList.AutoSize = true;
-            this.lblList.Location = new System.Drawing.Point(103, 31);
+            this.lblList.Location = new System.Drawing.Point(61, 31);
             this.lblList.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblList.Name = "lblList";
             this.lblList.Size = new System.Drawing.Size(120, 13);
@@ -64,17 +64,17 @@ namespace WFA_Coktail_Management
             // lbxList
             // 
             this.lbxList.FormattingEnabled = true;
-            this.lbxList.Location = new System.Drawing.Point(93, 54);
-            this.lbxList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbxList.Location = new System.Drawing.Point(11, 54);
+            this.lbxList.Margin = new System.Windows.Forms.Padding(2);
             this.lbxList.Name = "lbxList";
-            this.lbxList.Size = new System.Drawing.Size(144, 251);
+            this.lbxList.Size = new System.Drawing.Size(226, 251);
             this.lbxList.TabIndex = 2;
             // 
             // cmbChoice
             // 
             this.cmbChoice.FormattingEnabled = true;
             this.cmbChoice.Location = new System.Drawing.Point(259, 54);
-            this.cmbChoice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbChoice.Margin = new System.Windows.Forms.Padding(2);
             this.cmbChoice.Name = "cmbChoice";
             this.cmbChoice.Size = new System.Drawing.Size(185, 21);
             this.cmbChoice.TabIndex = 3;
@@ -93,7 +93,7 @@ namespace WFA_Coktail_Management
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(259, 118);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(185, 20);
             this.txtName.TabIndex = 5;
@@ -101,7 +101,7 @@ namespace WFA_Coktail_Management
             // btnModif
             // 
             this.btnModif.Location = new System.Drawing.Point(289, 149);
-            this.btnModif.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModif.Margin = new System.Windows.Forms.Padding(2);
             this.btnModif.Name = "btnModif";
             this.btnModif.Size = new System.Drawing.Size(130, 40);
             this.btnModif.TabIndex = 6;
@@ -112,7 +112,7 @@ namespace WFA_Coktail_Management
             // btnDestroy
             // 
             this.btnDestroy.Location = new System.Drawing.Point(289, 208);
-            this.btnDestroy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDestroy.Margin = new System.Windows.Forms.Padding(2);
             this.btnDestroy.Name = "btnDestroy";
             this.btnDestroy.Size = new System.Drawing.Size(130, 40);
             this.btnDestroy.TabIndex = 7;
@@ -122,7 +122,7 @@ namespace WFA_Coktail_Management
             // btnActualise
             // 
             this.btnActualise.Location = new System.Drawing.Point(289, 265);
-            this.btnActualise.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualise.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualise.Name = "btnActualise";
             this.btnActualise.Size = new System.Drawing.Size(130, 40);
             this.btnActualise.TabIndex = 8;
@@ -144,7 +144,7 @@ namespace WFA_Coktail_Management
             this.Controls.Add(this.lbxList);
             this.Controls.Add(this.lblChoice);
             this.Controls.Add(this.lblList);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Modifier_Détruire_Catégorie";
             this.Text = "Modifier_Détruire_Catégorie";
             this.Load += new System.EventHandler(this.Modifier_Détruire_Catégorie_Load);
