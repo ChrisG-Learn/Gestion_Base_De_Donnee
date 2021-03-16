@@ -19,49 +19,46 @@ namespace WFA_Coktail_Management
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Utility utility = new Utility();
-            utility.Fill_CmbCategory(cmbCategory);
+            fillcmbCocktailAdd();
+
         }
 
-        private void fillcmbQutation
-
-        private void categoryChecked()
+        private void fillcmbCocktailAdd()
         {
-            //if ()
-            //{
-            //    rdbMinuteCockatailAdd.Checked = true;
-            //}
-            //else
-            //{
-            //    rdbMinuteCockatailAdd.Checked = false;
-            //}
-            //if ()
-            //{
-            //    rdbStunningAdd.Checked = true;
-            //}
-            //else
-            //{
-            //    rdbStunningAdd.Checked = false;
-            //}
-            //if ()
-            //{
-            //    rdbForCuriousAdd.Checked = true;
-            //}
-            //else
-            //{
-            //    rdbForCuriousAdd.Checked = false;
-            //}
+            Utility utility = new Utility();
+            utility.Fill_CmbCategory(cmbCategory);
+
+            for (int i = 0; i < 11; i++)
+            {
+                cmbQuotation.Items.Add(i);
+            }
+        }
+
+        private string categoryChecked()
+        {
+            if (rdbMinuteCockatailAdd.Checked == true && rdbStunningAdd.Checked == false && rdbForCuriousAdd.Checked == false)
+            {
+                return "minute cocktail";
+            }
+            else if (rdbStunningAdd.Checked == true && rdbForCuriousAdd.Checked == false && rdbMinuteCockatailAdd.Checked == false)
+            {
+                return "stunning";
+            }
+            else if (rdbForCuriousAdd.Checked == true && rdbStunningAdd.Checked == false && rdbMinuteCockatailAdd.Checked == false)
+            {
+                return "for curious";
+            }
+            else
+            {
+                return "";
+            }
+
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            Form myform = new Ajout_Catégorie();
-            myform.ShowDialog();
+            DB_Manager dB_Manager = new DB_Manager();
+            DB_Manager.create_Cocktail(txtName.Text, categoryChecked().ToString(), int.Parse(cmbQuotation.SelectedItem.ToString()), int.Parse(cmbCategory.ValueMember.ToString()));
         }
     }
 }

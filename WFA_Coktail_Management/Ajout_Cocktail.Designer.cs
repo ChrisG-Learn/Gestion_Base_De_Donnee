@@ -34,14 +34,14 @@ namespace WFA_Coktail_Management
             this.lblQuotation = new System.Windows.Forms.Label();
             this.lblDifficulty = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.cmbQutation = new System.Windows.Forms.ComboBox();
+            this.cmbQuotation = new System.Windows.Forms.ComboBox();
             this.cmbCategory = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.rdbForCuriousAdd = new System.Windows.Forms.RadioButton();
             this.rdbMinuteCockatailAdd = new System.Windows.Forms.RadioButton();
             this.rdbStunningAdd = new System.Windows.Forms.RadioButton();
-            this.rdbForCuriousAdd = new System.Windows.Forms.RadioButton();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,13 +88,13 @@ namespace WFA_Coktail_Management
             this.txtName.Size = new System.Drawing.Size(317, 22);
             this.txtName.TabIndex = 5;
             // 
-            // cmbQutation
+            // cmbQuotation
             // 
-            this.cmbQutation.FormattingEnabled = true;
-            this.cmbQutation.Location = new System.Drawing.Point(227, 237);
-            this.cmbQutation.Name = "cmbQutation";
-            this.cmbQutation.Size = new System.Drawing.Size(317, 24);
-            this.cmbQutation.TabIndex = 6;
+            this.cmbQuotation.FormattingEnabled = true;
+            this.cmbQuotation.Location = new System.Drawing.Point(227, 237);
+            this.cmbQuotation.Name = "cmbQuotation";
+            this.cmbQuotation.Size = new System.Drawing.Size(317, 24);
+            this.cmbQuotation.TabIndex = 6;
             // 
             // cmbCategory
             // 
@@ -115,19 +115,21 @@ namespace WFA_Coktail_Management
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             // 
-            // btnAdd
+            // rdbForCuriousAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(250, 336);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(270, 59);
-            this.btnAdd.TabIndex = 13;
-            this.btnAdd.Text = "Ajouter";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.rdbForCuriousAdd.AutoSize = true;
+            this.rdbForCuriousAdd.Location = new System.Drawing.Point(38, 75);
+            this.rdbForCuriousAdd.Name = "rdbForCuriousAdd";
+            this.rdbForCuriousAdd.Size = new System.Drawing.Size(130, 21);
+            this.rdbForCuriousAdd.TabIndex = 16;
+            this.rdbForCuriousAdd.TabStop = true;
+            this.rdbForCuriousAdd.Text = "Pour les curieux";
+            this.rdbForCuriousAdd.UseVisualStyleBackColor = true;
             // 
             // rdbMinuteCockatailAdd
             // 
             this.rdbMinuteCockatailAdd.AutoSize = true;
+            this.rdbMinuteCockatailAdd.Checked = true;
             this.rdbMinuteCockatailAdd.Location = new System.Drawing.Point(38, 21);
             this.rdbMinuteCockatailAdd.Name = "rdbMinuteCockatailAdd";
             this.rdbMinuteCockatailAdd.Size = new System.Drawing.Size(124, 21);
@@ -147,16 +149,15 @@ namespace WFA_Coktail_Management
             this.rdbStunningAdd.Text = "Épatant";
             this.rdbStunningAdd.UseVisualStyleBackColor = true;
             // 
-            // rdbForCuriousAdd
+            // btnAdd
             // 
-            this.rdbForCuriousAdd.AutoSize = true;
-            this.rdbForCuriousAdd.Location = new System.Drawing.Point(38, 75);
-            this.rdbForCuriousAdd.Name = "rdbForCuriousAdd";
-            this.rdbForCuriousAdd.Size = new System.Drawing.Size(130, 21);
-            this.rdbForCuriousAdd.TabIndex = 16;
-            this.rdbForCuriousAdd.TabStop = true;
-            this.rdbForCuriousAdd.Text = "Pour les curieux";
-            this.rdbForCuriousAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Location = new System.Drawing.Point(250, 336);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(270, 59);
+            this.btnAdd.TabIndex = 13;
+            this.btnAdd.Text = "Ajouter";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // Ajout_Cocktail
             // 
@@ -166,7 +167,7 @@ namespace WFA_Coktail_Management
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cmbCategory);
-            this.Controls.Add(this.cmbQutation);
+            this.Controls.Add(this.cmbQuotation);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblDifficulty);
             this.Controls.Add(this.lblQuotation);
@@ -188,7 +189,7 @@ namespace WFA_Coktail_Management
         private System.Windows.Forms.Label lblQuotation;
         private System.Windows.Forms.Label lblDifficulty;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.ComboBox cmbQutation;
+        private System.Windows.Forms.ComboBox cmbQuotation;
         private System.Windows.Forms.ComboBox cmbCategory;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnAdd;
