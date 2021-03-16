@@ -26,5 +26,11 @@ namespace WFA_Coktail_Management
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Form myform = new Ajout_Catégorie();
+            myform.ShowDialog();
+        }
     }
 }

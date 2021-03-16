@@ -40,5 +40,10 @@ namespace WFA_Coktail_Management
             Form myform = new Modifier_Détruire_Catégorie();
             myform.ShowDialog();
         }
+
+        private void catégorieToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

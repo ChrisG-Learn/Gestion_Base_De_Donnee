@@ -48,7 +48,8 @@
             this.catégorieToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(600, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -58,20 +59,20 @@
             this.ajoutToolStripMenuItem,
             this.modifierDétruireToolStripMenuItem});
             this.cocktailToolStripMenuItem.Name = "cocktailToolStripMenuItem";
-            this.cocktailToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.cocktailToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.cocktailToolStripMenuItem.Text = "Cocktail";
             // 
             // ajoutToolStripMenuItem
             // 
             this.ajoutToolStripMenuItem.Name = "ajoutToolStripMenuItem";
-            this.ajoutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ajoutToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.ajoutToolStripMenuItem.Text = "Ajout";
             this.ajoutToolStripMenuItem.Click += new System.EventHandler(this.ajoutToolStripMenuItem_Click);
             // 
             // modifierDétruireToolStripMenuItem
             // 
             this.modifierDétruireToolStripMenuItem.Name = "modifierDétruireToolStripMenuItem";
-            this.modifierDétruireToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.modifierDétruireToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.modifierDétruireToolStripMenuItem.Text = "Modifier_Détruire";
             this.modifierDétruireToolStripMenuItem.Click += new System.EventHandler(this.modifierDétruireToolStripMenuItem_Click);
             // 
@@ -81,20 +82,21 @@
             this.ajoutToolStripMenuItem1,
             this.modifierDétruireToolStripMenuItem1});
             this.catégorieToolStripMenuItem.Name = "catégorieToolStripMenuItem";
-            this.catégorieToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
+            this.catégorieToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.catégorieToolStripMenuItem.Text = "Catégorie";
+            this.catégorieToolStripMenuItem.Click += new System.EventHandler(this.catégorieToolStripMenuItem_Click);
             // 
             // ajoutToolStripMenuItem1
             // 
             this.ajoutToolStripMenuItem1.Name = "ajoutToolStripMenuItem1";
-            this.ajoutToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.ajoutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.ajoutToolStripMenuItem1.Text = "Ajout";
             this.ajoutToolStripMenuItem1.Click += new System.EventHandler(this.ajoutToolStripMenuItem1_Click);
             // 
             // modifierDétruireToolStripMenuItem1
             // 
             this.modifierDétruireToolStripMenuItem1.Name = "modifierDétruireToolStripMenuItem1";
-            this.modifierDétruireToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.modifierDétruireToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.modifierDétruireToolStripMenuItem1.Text = "Modifier_Détruire";
             this.modifierDétruireToolStripMenuItem1.Click += new System.EventHandler(this.modifierDétruireToolStripMenuItem1_Click);
             // 
@@ -106,11 +108,12 @@
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Menu";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
