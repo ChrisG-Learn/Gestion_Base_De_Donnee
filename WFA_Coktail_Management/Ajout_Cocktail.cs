@@ -21,6 +21,10 @@ namespace WFA_Coktail_Management
         {
             Utility utility = new Utility();
             utility.Fill_CmbCategory(cmbCategory);
+            for (int i = 0; i < 11; i++)
+            {
+                cmbQuotation.Items.Add(i);
+            }
         }
 
         private void categoryChecked()
@@ -62,6 +66,11 @@ namespace WFA_Coktail_Management
             myform.ShowDialog();
             Utility utility = new Utility();
             utility.Fill_CmbCategory(cmbCategory);
+        }
+
+        private void cmbQuotation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

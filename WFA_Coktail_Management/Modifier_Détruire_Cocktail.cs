@@ -45,5 +45,10 @@ namespace WFA_Coktail_Management
                 }
             }
         }
+
+        private void cmbQuotation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

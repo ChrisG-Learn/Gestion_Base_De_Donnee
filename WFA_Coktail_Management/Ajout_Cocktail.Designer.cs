@@ -95,6 +95,7 @@ namespace WFA_Coktail_Management
             this.cmbQuotation.Name = "cmbQuotation";
             this.cmbQuotation.Size = new System.Drawing.Size(317, 24);
             this.cmbQuotation.TabIndex = 6;
+            this.cmbQuotation.SelectedIndexChanged += new System.EventHandler(this.cmbQuotation_SelectedIndexChanged);
             // 
             // cmbCategory
             // 
