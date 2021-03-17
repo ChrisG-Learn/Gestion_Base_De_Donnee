@@ -39,8 +39,8 @@ namespace WFA_Coktail_Management
                 if (dataReader.Read())
                 {
                     txtName.Text = dataReader["cocktail_name"].ToString();
-                    cmbQuotation.SelectedValue = dataReader["difficulty_level"].ToString();
-                    cmbCategory.SelectedValue = dataReader["quotation"].ToString();
+                    cmbQuotation.SelectedItem = dataReader["difficulty_level"].ToString();
+                    cmbCategory.SelectedItem = dataReader["quotation"].ToString();
 
                 }
             }
