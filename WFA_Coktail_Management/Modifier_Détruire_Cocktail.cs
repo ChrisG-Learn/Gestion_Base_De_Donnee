@@ -22,6 +22,12 @@ namespace WFA_Coktail_Management
         {
             Utility utility = new Utility();
             utility.fill_CmbCocktail(cmbCocktail);
+            utility.Fill_CmbCategory(cmbCategory);
+            for (int i = 0; i < 11; i++)
+            {
+                cmbQuotation.Items.Add(i);
+            }
+            cmbCategory.DropDownStyle = ComboBoxStyle.DropDown;
         }
 
         private void btnCocktailModif_Click(object sender, EventArgs e)
@@ -39,9 +45,9 @@ namespace WFA_Coktail_Management
                 if (dataReader.Read())
                 {
                     txtName.Text = dataReader["cocktail_name"].ToString();
-                    cmbQuotation.SelectedItem = dataReader["difficulty_level"].ToString();
-                    cmbCategory.SelectedItem = dataReader["quotation"].ToString();
-
+                    cmbQuotation.SelectedText = dataReader["difficulty_level"].ToString();
+                    cmbCategory.SelectedItem = dataReader["quotation"];
+                    
                 }
             }
         }
