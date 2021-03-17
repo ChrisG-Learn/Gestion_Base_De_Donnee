@@ -42,6 +42,7 @@ namespace WFA_Coktail_Management
             this.rdbStunningAdd = new System.Windows.Forms.RadioButton();
             this.btnAdd = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.lbxAjoutCocktail = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -160,11 +161,21 @@ namespace WFA_Coktail_Management
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // lbxAjoutCocktail
+            // 
+            this.lbxAjoutCocktail.FormattingEnabled = true;
+            this.lbxAjoutCocktail.ItemHeight = 16;
+            this.lbxAjoutCocktail.Location = new System.Drawing.Point(561, 80);
+            this.lbxAjoutCocktail.Name = "lbxAjoutCocktail";
+            this.lbxAjoutCocktail.Size = new System.Drawing.Size(167, 308);
+            this.lbxAjoutCocktail.TabIndex = 14;
+            // 
             // Ajout_Cocktail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbxAjoutCocktail);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cmbCategory);
@@ -198,5 +209,6 @@ namespace WFA_Coktail_Management
         private System.Windows.Forms.RadioButton rdbForCuriousAdd;
         private System.Windows.Forms.RadioButton rdbMinuteCockatailAdd;
         private System.Windows.Forms.RadioButton rdbStunningAdd;
+        private System.Windows.Forms.ListBox lbxAjoutCocktail;
     }
 }
