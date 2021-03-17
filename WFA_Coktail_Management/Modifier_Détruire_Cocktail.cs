@@ -20,6 +20,11 @@ namespace WFA_Coktail_Management
 
         private void Modifier_Détruire_Cocktail_Load(object sender, EventArgs e)
         {
+            FillCmb();
+        }
+
+        private void FillCmb() 
+        {
             Utility utility = new Utility();
             utility.fill_CmbCocktail(cmbCocktail);
             utility.Fill_CmbCategory(cmbCategory);
@@ -27,12 +32,23 @@ namespace WFA_Coktail_Management
             {
                 cmbQuotation.Items.Add(i);
             }
-            cmbCategory.DropDownStyle = ComboBoxStyle.DropDown;
+            cmbQuotation.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void btnCocktailModif_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                DB_Manager dB_Manager = new DB_Manager();
+                dB_Manager.modify_Cocktail(txtName.Text, cmbDifficulty.SelectedItem.ToString(), int.Parse(cmbQuotation.SelectedItem.ToString()), int.Parse(cmbCategory.SelectedValue.ToString()), int.Parse(cmbCocktail.SelectedValue.ToString()));
+                FillCmb();
+                txtName.Clear();
+                lstAction.Items.Add("Modification sucessfully complete.");
+            }
+            catch (SystemException ex)
+            {
+                MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
+            }
         }
 
         private void cmbCocktail_SelectedIndexChanged(object sender, EventArgs e)
@@ -45,16 +61,37 @@ namespace WFA_Coktail_Management
                 if (dataReader.Read())
                 {
                     txtName.Text = dataReader["cocktail_name"].ToString();
-                    cmbQuotation.SelectedText = dataReader["difficulty_level"].ToString();
-                    cmbCategory.SelectedItem = dataReader["quotation"];
-                    
+                    cmbQuotation.SelectedItem = dataReader["quotation"].ToString();
+                    cmbCategory.SelectedValue = dataReader["category_Id"].ToString();
                 }
             }
+            
         }
 
         private void cmbQuotation_SelectedIndexChanged(object sender, EventArgs e)
         {
+          
+        }
 
+        private void rdbMinuteCocktail_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCocktailDestroy_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DB_Manager dB_Manager = new DB_Manager();
+                dB_Manager.destroy_Cocktail(int.Parse(cmbCocktail.SelectedValue.ToString()));
+                FillCmb();
+                txtName.Clear();
+                lstAction.Items.Add("Destruction sucessfully complete");
+            }
+            catch (SystemException ex)
+            {
+                MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
+            }
         }
     }
 }

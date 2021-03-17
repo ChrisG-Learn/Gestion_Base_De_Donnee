@@ -128,5 +128,16 @@ namespace WFA_Coktail_Management
                 sqlCommand.ExecuteNonQuery();
             }
         }
+
+        public void destroy_Cocktail(int ID)
+        {
+            using (SqlConnection sqlConnection = getConnection())
+            {
+                string sql = "DELETE FROM tbl_cocktail WHERE cocktail_Id = " + ID;
+                SqlCommand sqlCommand = new SqlCommand(sql, sqlConnection);
+                sqlConnection.Open();
+                sqlCommand.ExecuteNonQuery();
+            }
+        }
     }
 }
