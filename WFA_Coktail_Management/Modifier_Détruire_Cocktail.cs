@@ -28,6 +28,7 @@ namespace WFA_Coktail_Management
             Utility utility = new Utility();
             utility.fill_CmbCocktail(cmbCocktail);
             utility.Fill_CmbCategory(cmbCategory);
+            utility.fill_CmbDifficulty(cmbDifficulty);
             for (int i = 0; i < 11; i++)
             {
                 cmbQuotation.Items.Add(i);
@@ -61,11 +62,12 @@ namespace WFA_Coktail_Management
                 if (dataReader.Read())
                 {
                     txtName.Text = dataReader["cocktail_name"].ToString();
-                    cmbQuotation.SelectedItem = dataReader["quotation"].ToString();
-                    cmbCategory.SelectedValue = dataReader["category_Id"].ToString();
-                }
+                    cmbQuotation.SelectedItem = dataReader["quotation"];
+                    cmbCategory.SelectedValue = dataReader["category_Id"];
+                    cmbDifficulty.SelectedItem = dataReader["difficulty_level"];
+                }  
             }
-            
+
         }
 
         private void cmbQuotation_SelectedIndexChanged(object sender, EventArgs e)

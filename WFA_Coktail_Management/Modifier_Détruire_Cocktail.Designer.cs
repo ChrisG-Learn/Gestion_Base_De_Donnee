@@ -46,7 +46,7 @@ namespace WFA_Coktail_Management
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(170, 62);
+            this.txtName.Location = new System.Drawing.Point(114, 66);
             this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(219, 20);
@@ -55,7 +55,7 @@ namespace WFA_Coktail_Management
             // cmbCocktail
             // 
             this.cmbCocktail.FormattingEnabled = true;
-            this.cmbCocktail.Location = new System.Drawing.Point(158, 28);
+            this.cmbCocktail.Location = new System.Drawing.Point(102, 32);
             this.cmbCocktail.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCocktail.Name = "cmbCocktail";
             this.cmbCocktail.Size = new System.Drawing.Size(246, 21);
@@ -65,7 +65,7 @@ namespace WFA_Coktail_Management
             // cmbQuotation
             // 
             this.cmbQuotation.FormattingEnabled = true;
-            this.cmbQuotation.Location = new System.Drawing.Point(170, 198);
+            this.cmbQuotation.Location = new System.Drawing.Point(114, 202);
             this.cmbQuotation.Margin = new System.Windows.Forms.Padding(2);
             this.cmbQuotation.Name = "cmbQuotation";
             this.cmbQuotation.Size = new System.Drawing.Size(219, 21);
@@ -74,7 +74,7 @@ namespace WFA_Coktail_Management
             // cmbCategory
             // 
             this.cmbCategory.FormattingEnabled = true;
-            this.cmbCategory.Location = new System.Drawing.Point(170, 241);
+            this.cmbCategory.Location = new System.Drawing.Point(114, 245);
             this.cmbCategory.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(219, 21);
@@ -82,7 +82,7 @@ namespace WFA_Coktail_Management
             // 
             // btnCocktailModif
             // 
-            this.btnCocktailModif.Location = new System.Drawing.Point(132, 288);
+            this.btnCocktailModif.Location = new System.Drawing.Point(76, 292);
             this.btnCocktailModif.Margin = new System.Windows.Forms.Padding(2);
             this.btnCocktailModif.Name = "btnCocktailModif";
             this.btnCocktailModif.Size = new System.Drawing.Size(141, 46);
@@ -93,7 +93,7 @@ namespace WFA_Coktail_Management
             // 
             // btnCocktailDestroy
             // 
-            this.btnCocktailDestroy.Location = new System.Drawing.Point(294, 288);
+            this.btnCocktailDestroy.Location = new System.Drawing.Point(238, 292);
             this.btnCocktailDestroy.Margin = new System.Windows.Forms.Padding(2);
             this.btnCocktailDestroy.Name = "btnCocktailDestroy";
             this.btnCocktailDestroy.Size = new System.Drawing.Size(141, 46);
@@ -105,7 +105,7 @@ namespace WFA_Coktail_Management
             // lblChoice
             // 
             this.lblChoice.AutoSize = true;
-            this.lblChoice.Location = new System.Drawing.Point(62, 31);
+            this.lblChoice.Location = new System.Drawing.Point(6, 35);
             this.lblChoice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblChoice.Name = "lblChoice";
             this.lblChoice.Size = new System.Drawing.Size(88, 13);
@@ -115,7 +115,7 @@ namespace WFA_Coktail_Management
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(88, 64);
+            this.lblName.Location = new System.Drawing.Point(32, 68);
             this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(29, 13);
@@ -125,7 +125,7 @@ namespace WFA_Coktail_Management
             // lblDifficulty
             // 
             this.lblDifficulty.AutoSize = true;
-            this.lblDifficulty.Location = new System.Drawing.Point(79, 137);
+            this.lblDifficulty.Location = new System.Drawing.Point(23, 141);
             this.lblDifficulty.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDifficulty.Name = "lblDifficulty";
             this.lblDifficulty.Size = new System.Drawing.Size(48, 13);
@@ -135,7 +135,7 @@ namespace WFA_Coktail_Management
             // lblQuotation
             // 
             this.lblQuotation.AutoSize = true;
-            this.lblQuotation.Location = new System.Drawing.Point(79, 198);
+            this.lblQuotation.Location = new System.Drawing.Point(23, 202);
             this.lblQuotation.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblQuotation.Name = "lblQuotation";
             this.lblQuotation.Size = new System.Drawing.Size(53, 13);
@@ -145,7 +145,7 @@ namespace WFA_Coktail_Management
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
-            this.lblCategory.Location = new System.Drawing.Point(80, 244);
+            this.lblCategory.Location = new System.Drawing.Point(24, 248);
             this.lblCategory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(52, 13);
@@ -155,15 +155,15 @@ namespace WFA_Coktail_Management
             // lstAction
             // 
             this.lstAction.FormattingEnabled = true;
-            this.lstAction.Location = new System.Drawing.Point(440, 31);
+            this.lstAction.Location = new System.Drawing.Point(384, 31);
             this.lstAction.Name = "lstAction";
-            this.lstAction.Size = new System.Drawing.Size(148, 303);
+            this.lstAction.Size = new System.Drawing.Size(204, 303);
             this.lstAction.TabIndex = 12;
             // 
             // cmbDifficulty
             // 
             this.cmbDifficulty.FormattingEnabled = true;
-            this.cmbDifficulty.Location = new System.Drawing.Point(170, 134);
+            this.cmbDifficulty.Location = new System.Drawing.Point(114, 138);
             this.cmbDifficulty.Name = "cmbDifficulty";
             this.cmbDifficulty.Size = new System.Drawing.Size(219, 21);
             this.cmbDifficulty.TabIndex = 13;

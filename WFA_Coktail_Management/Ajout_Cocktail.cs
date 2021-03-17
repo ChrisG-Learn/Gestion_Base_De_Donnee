@@ -21,6 +21,7 @@ namespace WFA_Coktail_Management
         private void Form1_Load(object sender, EventArgs e)
         {
             lbxAjoutCocktail.Items.Clear();
+            lbxAjoutCocktail.Visible = true;
             Utility utility = new Utility();
             utility.Fill_CmbCategory(cmbCategory);
             for (int i = 0; i < 11; i++)
@@ -30,25 +31,17 @@ namespace WFA_Coktail_Management
             cmbQuotation.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
-        private string categoryChecked()
+        private string difficultyChecked()
         {
             if (rdbMinuteCockatailAdd.Checked == true && rdbStunningAdd.Checked == false && rdbForCuriousAdd.Checked == false)
             {
                 return "minute cocktail";
             }
-            else
-            {
-                return "";
-            }
-            if (rdbStunningAdd.Checked == true && rdbForCuriousAdd.Checked == false && rdbMinuteCockatailAdd.Checked == false)
+            else if (rdbStunningAdd.Checked == true && rdbForCuriousAdd.Checked == false && rdbMinuteCockatailAdd.Checked == false)
             {
                 return "stunning";
             }
-            else
-            {
-                return "";
-            }
-            if (rdbForCuriousAdd.Checked = true && rdbStunningAdd.Checked == false && rdbMinuteCockatailAdd.Checked == false)
+            else if (rdbForCuriousAdd.Checked == true && rdbStunningAdd.Checked == false && rdbMinuteCockatailAdd.Checked == false)
             {
                 return "for curious";
             }
@@ -63,8 +56,8 @@ namespace WFA_Coktail_Management
 
             try
             {
-                dB_Manager.create_Cocktail(txtName.Text, categoryChecked(), int.Parse(cmbQuotation.SelectedItem.ToString()), int.Parse(cmbCategory.SelectedIndex.ToString()));
-                lbxAjoutCocktail.Items.Add("Cocktail " + txtName + " crée");
+                dB_Manager.create_Cocktail(txtName.Text, difficultyChecked(), int.Parse(cmbQuotation.SelectedItem.ToString()), int.Parse(cmbCategory.SelectedValue.ToString()));
+                lbxAjoutCocktail.Items.Add("Cocktail " + txtName.Text + " sucessfully created");
             }
             catch (SystemException ex)
             {
@@ -83,6 +76,12 @@ namespace WFA_Coktail_Management
         private void cmbQuotation_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Form myform = new Ajout_Catégorie();
+            myform.ShowDialog();
         }
     }
 }

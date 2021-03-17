@@ -37,28 +37,27 @@ namespace WFA_Coktail_Management
             // 
             // txtCategory
             // 
-            this.txtCategory.Location = new System.Drawing.Point(333, 71);
-            this.txtCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCategory.Location = new System.Drawing.Point(250, 58);
+            this.txtCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCategory.Name = "txtCategory";
-            this.txtCategory.Size = new System.Drawing.Size(295, 22);
+            this.txtCategory.Size = new System.Drawing.Size(222, 20);
             this.txtCategory.TabIndex = 0;
             // 
             // lbxList
             // 
             this.lbxList.FormattingEnabled = true;
-            this.lbxList.ItemHeight = 16;
-            this.lbxList.Location = new System.Drawing.Point(96, 71);
-            this.lbxList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lbxList.Location = new System.Drawing.Point(72, 58);
+            this.lbxList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lbxList.Name = "lbxList";
-            this.lbxList.Size = new System.Drawing.Size(205, 324);
+            this.lbxList.Size = new System.Drawing.Size(155, 264);
             this.lbxList.TabIndex = 1;
             // 
             // btnAddCategory
             // 
-            this.btnAddCategory.Location = new System.Drawing.Point(363, 132);
-            this.btnAddCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddCategory.Location = new System.Drawing.Point(272, 107);
+            this.btnAddCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddCategory.Name = "btnAddCategory";
-            this.btnAddCategory.Size = new System.Drawing.Size(232, 49);
+            this.btnAddCategory.Size = new System.Drawing.Size(174, 40);
             this.btnAddCategory.TabIndex = 2;
             this.btnAddCategory.Text = "Ajouter une catégorie";
             this.btnAddCategory.UseVisualStyleBackColor = true;
@@ -67,24 +66,26 @@ namespace WFA_Coktail_Management
             // lblNameAdd
             // 
             this.lblNameAdd.AutoSize = true;
-            this.lblNameAdd.Location = new System.Drawing.Point(389, 42);
+            this.lblNameAdd.Location = new System.Drawing.Point(292, 34);
+            this.lblNameAdd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNameAdd.Name = "lblNameAdd";
-            this.lblNameAdd.Size = new System.Drawing.Size(187, 17);
+            this.lblNameAdd.Size = new System.Drawing.Size(140, 13);
             this.lblNameAdd.TabIndex = 4;
             this.lblNameAdd.Text = "Ajouter un nom de catégorie";
             // 
             // Ajout_Catégorie
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.lblNameAdd);
             this.Controls.Add(this.btnAddCategory);
             this.Controls.Add(this.lbxList);
             this.Controls.Add(this.txtCategory);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Ajout_Catégorie";
             this.Text = "Ajout_Catégorie";
+            this.Load += new System.EventHandler(this.Ajout_Catégorie_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

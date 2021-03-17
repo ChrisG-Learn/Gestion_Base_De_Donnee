@@ -89,14 +89,14 @@
             // ajoutToolStripMenuItem1
             // 
             this.ajoutToolStripMenuItem1.Name = "ajoutToolStripMenuItem1";
-            this.ajoutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.ajoutToolStripMenuItem1.Size = new System.Drawing.Size(166, 22);
             this.ajoutToolStripMenuItem1.Text = "Ajout";
             this.ajoutToolStripMenuItem1.Click += new System.EventHandler(this.ajoutToolStripMenuItem1_Click);
             // 
             // modifierDétruireToolStripMenuItem1
             // 
             this.modifierDétruireToolStripMenuItem1.Name = "modifierDétruireToolStripMenuItem1";
-            this.modifierDétruireToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.modifierDétruireToolStripMenuItem1.Size = new System.Drawing.Size(166, 22);
             this.modifierDétruireToolStripMenuItem1.Text = "Modifier_Détruire";
             this.modifierDétruireToolStripMenuItem1.Click += new System.EventHandler(this.modifierDétruireToolStripMenuItem1_Click);
             // 
@@ -113,9 +113,10 @@
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Menu";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

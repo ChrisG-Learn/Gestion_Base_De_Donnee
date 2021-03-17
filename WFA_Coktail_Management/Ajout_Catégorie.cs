@@ -25,12 +25,17 @@ namespace WFA_Coktail_Management
             try
             {
                 dB_Manager.create_Category(txtCategory.Text);
-                lbxList.Items.Add("Category " + txtCategory + " created");
+                lbxList.Items.Add("Category " + txtCategory.Text + " created");
             }
             catch (SystemException ex)
             {
                 MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
             }
+        }
+
+        private void Ajout_Catégorie_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

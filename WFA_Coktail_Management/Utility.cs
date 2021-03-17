@@ -42,5 +42,12 @@ namespace WFA_Coktail_Management
             cmb.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
+        public void fill_CmbDifficulty(ComboBox cmb)
+        {
+            cmb.Items.Add("minute cocktail");
+            cmb.Items.Add("for curious");
+            cmb.Items.Add("stunning");
+            cmb.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
     }
 }

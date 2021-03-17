@@ -45,5 +45,10 @@ namespace WFA_Coktail_Management
         {
 
         }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
