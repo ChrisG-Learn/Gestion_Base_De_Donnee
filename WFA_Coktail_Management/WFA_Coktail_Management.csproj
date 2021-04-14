@@ -60,6 +60,18 @@
       <DependentUpon>Ajout_Cocktail.cs</DependentUpon>
     </Compile>
     <Compile Include="DB_Manager.cs" />
+    <Compile Include="IngredientPourCocktails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngredientPourCocktails.Designer.cs">
+      <DependentUpon>IngredientPourCocktails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Les_catégorie_et_leur_cocktails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Les_catégorie_et_leur_cocktails.Designer.cs">
+      <DependentUpon>Les_catégorie_et_leur_cocktails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ajout_Catégorie.resx">
       <DependentUpon>Ajout_Catégorie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Les_catégorie_et_leur_cocktails.resx">
+      <DependentUpon>Les_catégorie_et_leur_cocktails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
