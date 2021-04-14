@@ -36,6 +36,11 @@
             this.catégorieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajoutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.modifierDétruireToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ingredientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterDesIngredientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterDesIngredientsAUnCocktailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.autreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.voirLesCatégoriesEtLesCocktailLiéeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -45,7 +50,9 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cocktailToolStripMenuItem,
-            this.catégorieToolStripMenuItem});
+            this.catégorieToolStripMenuItem,
+            this.ingredientsToolStripMenuItem,
+            this.autreToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -65,15 +72,15 @@
             // ajoutToolStripMenuItem
             // 
             this.ajoutToolStripMenuItem.Name = "ajoutToolStripMenuItem";
-            this.ajoutToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.ajoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ajoutToolStripMenuItem.Text = "Ajout";
             this.ajoutToolStripMenuItem.Click += new System.EventHandler(this.ajoutToolStripMenuItem_Click);
             // 
             // modifierDétruireToolStripMenuItem
             // 
             this.modifierDétruireToolStripMenuItem.Name = "modifierDétruireToolStripMenuItem";
-            this.modifierDétruireToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
-            this.modifierDétruireToolStripMenuItem.Text = "Modifier_Détruire";
+            this.modifierDétruireToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modifierDétruireToolStripMenuItem.Text = "Modifier ou détruire";
             this.modifierDétruireToolStripMenuItem.Click += new System.EventHandler(this.modifierDétruireToolStripMenuItem_Click);
             // 
             // catégorieToolStripMenuItem
@@ -89,16 +96,54 @@
             // ajoutToolStripMenuItem1
             // 
             this.ajoutToolStripMenuItem1.Name = "ajoutToolStripMenuItem1";
-            this.ajoutToolStripMenuItem1.Size = new System.Drawing.Size(166, 22);
+            this.ajoutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.ajoutToolStripMenuItem1.Text = "Ajout";
             this.ajoutToolStripMenuItem1.Click += new System.EventHandler(this.ajoutToolStripMenuItem1_Click);
             // 
             // modifierDétruireToolStripMenuItem1
             // 
             this.modifierDétruireToolStripMenuItem1.Name = "modifierDétruireToolStripMenuItem1";
-            this.modifierDétruireToolStripMenuItem1.Size = new System.Drawing.Size(166, 22);
+            this.modifierDétruireToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.modifierDétruireToolStripMenuItem1.Text = "Modifier_Détruire";
             this.modifierDétruireToolStripMenuItem1.Click += new System.EventHandler(this.modifierDétruireToolStripMenuItem1_Click);
+            // 
+            // ingredientsToolStripMenuItem
+            // 
+            this.ingredientsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajouterDesIngredientsToolStripMenuItem,
+            this.ajouterDesIngredientsAUnCocktailToolStripMenuItem});
+            this.ingredientsToolStripMenuItem.Name = "ingredientsToolStripMenuItem";
+            this.ingredientsToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.ingredientsToolStripMenuItem.Text = "Ingredients";
+            // 
+            // ajouterDesIngredientsToolStripMenuItem
+            // 
+            this.ajouterDesIngredientsToolStripMenuItem.Name = "ajouterDesIngredientsToolStripMenuItem";
+            this.ajouterDesIngredientsToolStripMenuItem.Size = new System.Drawing.Size(303, 22);
+            this.ajouterDesIngredientsToolStripMenuItem.Text = "Ajouter ou voir les ingredients d\'un cocktail";
+            this.ajouterDesIngredientsToolStripMenuItem.Click += new System.EventHandler(this.ajouterDesIngredientsToolStripMenuItem_Click);
+            // 
+            // ajouterDesIngredientsAUnCocktailToolStripMenuItem
+            // 
+            this.ajouterDesIngredientsAUnCocktailToolStripMenuItem.Name = "ajouterDesIngredientsAUnCocktailToolStripMenuItem";
+            this.ajouterDesIngredientsAUnCocktailToolStripMenuItem.Size = new System.Drawing.Size(303, 22);
+            this.ajouterDesIngredientsAUnCocktailToolStripMenuItem.Text = "Voir les cocktail fait à base d\'un ingrédient";
+            this.ajouterDesIngredientsAUnCocktailToolStripMenuItem.Click += new System.EventHandler(this.ajouterDesIngredientsAUnCocktailToolStripMenuItem_Click);
+            // 
+            // autreToolStripMenuItem
+            // 
+            this.autreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.voirLesCatégoriesEtLesCocktailLiéeToolStripMenuItem});
+            this.autreToolStripMenuItem.Name = "autreToolStripMenuItem";
+            this.autreToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.autreToolStripMenuItem.Text = "Autre";
+            // 
+            // voirLesCatégoriesEtLesCocktailLiéeToolStripMenuItem
+            // 
+            this.voirLesCatégoriesEtLesCocktailLiéeToolStripMenuItem.Name = "voirLesCatégoriesEtLesCocktailLiéeToolStripMenuItem";
+            this.voirLesCatégoriesEtLesCocktailLiéeToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
+            this.voirLesCatégoriesEtLesCocktailLiéeToolStripMenuItem.Text = "Voir les catégories et les cocktail liée";
+            this.voirLesCatégoriesEtLesCocktailLiéeToolStripMenuItem.Click += new System.EventHandler(this.voirLesCatégoriesEtLesCocktailLiéeToolStripMenuItem_Click);
             // 
             // contextMenuStrip1
             // 
@@ -134,6 +179,11 @@
         private System.Windows.Forms.ToolStripMenuItem ajoutToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem modifierDétruireToolStripMenuItem1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem ingredientsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajouterDesIngredientsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajouterDesIngredientsAUnCocktailToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem autreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem voirLesCatégoriesEtLesCocktailLiéeToolStripMenuItem;
     }
 }
 

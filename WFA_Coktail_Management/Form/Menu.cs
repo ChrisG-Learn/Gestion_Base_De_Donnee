@@ -50,5 +50,23 @@ namespace WFA_Coktail_Management
         {
 
         }
+
+        private void ajouterDesIngredientsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new frm_add_see_cocktail_ingredients();
+            form.ShowDialog();
+        }
+
+        private void voirLesCatégoriesEtLesCocktailLiéeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new Les_catégorie_et_leur_cocktails();
+            form.ShowDialog();
+        }
+
+        private void ajouterDesIngredientsAUnCocktailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new IngredientPourCocktails();
+            form.ShowDialog();
+        }
     }
 }

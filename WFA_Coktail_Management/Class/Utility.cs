@@ -49,5 +49,19 @@ namespace WFA_Coktail_Management
             cmb.Items.Add("stunning");
             cmb.DropDownStyle = ComboBoxStyle.DropDownList;
         }
+
+        public void Fill_CmbIngredients(ComboBox cmb)
+        {
+            DB_Manager db_Manager = new DB_Manager();
+            BindingSource Bs = new BindingSource();
+            using (SqlDataReader Dr = db_Manager.list_Cocktail_Category("Ingredients"))
+            {
+                Bs.DataSource = Dr;
+                cmb.ValueMember = "ID_ingredient";
+                cmb.DisplayMember = "info";
+                cmb.DataSource = Bs;
+            }
+            cmb.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
     }
 }

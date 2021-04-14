@@ -54,6 +54,9 @@ namespace WFA_Coktail_Management
             string sql;
             if (choice == "Cocktail")
                 sql = "SELECT cocktail_Id, cocktail_name AS 'info', difficulty_level, quotation, category_Id FROM tbl_cocktail ORDER BY cocktail_name";
+
+            else if (choice == "Ingredients")
+                sql = "SELECT ID_ingredient, ingredient_name AS 'info' FROM tbl_ingredients ORDER BY 'info'";
             else
                 sql = "SELECT category_Id, category AS 'info' FROM tbl_category ORDER BY category";
             SqlCommand sqlCommand = new SqlCommand(sql, sqlConnection);
@@ -139,5 +142,6 @@ namespace WFA_Coktail_Management
                 sqlCommand.ExecuteNonQuery();
             }
         }
+
     }
 }

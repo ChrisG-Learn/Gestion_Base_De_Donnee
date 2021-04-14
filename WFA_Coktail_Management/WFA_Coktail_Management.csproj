@@ -46,70 +46,82 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ajout_Catégorie.cs">
+    <Compile Include="Form\Ajout_Catégorie.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ajout_Catégorie.Designer.cs">
+    <Compile Include="Form\Ajout_Catégorie.Designer.cs">
       <DependentUpon>Ajout_Catégorie.cs</DependentUpon>
     </Compile>
-    <Compile Include="Config.cs" />
-    <Compile Include="Ajout_Cocktail.cs">
+    <Compile Include="Class\Config.cs" />
+    <Compile Include="Form\Ajout_Cocktail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ajout_Cocktail.Designer.cs">
+    <Compile Include="Form\Ajout_Cocktail.Designer.cs">
       <DependentUpon>Ajout_Cocktail.cs</DependentUpon>
     </Compile>
-    <Compile Include="DB_Manager.cs" />
-    <Compile Include="IngredientPourCocktails.cs">
+    <Compile Include="Class\DB_Manager.cs" />
+    <Compile Include="Form\IngredientPourCocktails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IngredientPourCocktails.Designer.cs">
+    <Compile Include="Form\IngredientPourCocktails.Designer.cs">
       <DependentUpon>IngredientPourCocktails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Les_catégorie_et_leur_cocktails.cs">
+    <Compile Include="Form\Les_catégorie_et_leur_cocktails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Les_catégorie_et_leur_cocktails.Designer.cs">
+    <Compile Include="Form\Les_catégorie_et_leur_cocktails.Designer.cs">
       <DependentUpon>Les_catégorie_et_leur_cocktails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
+    <Compile Include="Form\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
+    <Compile Include="Form\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modifier_Détruire_Catégorie.cs">
+    <Compile Include="Form\Modifier_Détruire_Catégorie.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modifier_Détruire_Catégorie.Designer.cs">
+    <Compile Include="Form\Modifier_Détruire_Catégorie.Designer.cs">
       <DependentUpon>Modifier_Détruire_Catégorie.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modifier_Détruire_Cocktail.cs">
+    <Compile Include="Form\Modifier_Détruire_Cocktail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modifier_Détruire_Cocktail.Designer.cs">
+    <Compile Include="Form\Modifier_Détruire_Cocktail.Designer.cs">
       <DependentUpon>Modifier_Détruire_Cocktail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Class\Program.cs" />
+    <Compile Include="Form\frm_add_see_cocktail_ingredients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frm_add_see_cocktail_ingredients.Designer.cs">
+      <DependentUpon>frm_add_see_cocktail_ingredients.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utility.cs" />
-    <EmbeddedResource Include="Ajout_Cocktail.resx">
+    <Compile Include="Class\Utility.cs" />
+    <EmbeddedResource Include="Form\Ajout_Cocktail.resx">
       <DependentUpon>Ajout_Cocktail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ajout_Catégorie.resx">
+    <EmbeddedResource Include="Form\Ajout_Catégorie.resx">
       <DependentUpon>Ajout_Catégorie.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Les_catégorie_et_leur_cocktails.resx">
+    <EmbeddedResource Include="Form\IngredientPourCocktails.resx">
+      <DependentUpon>IngredientPourCocktails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Les_catégorie_et_leur_cocktails.resx">
       <DependentUpon>Les_catégorie_et_leur_cocktails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
+    <EmbeddedResource Include="Form\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modifier_Détruire_Catégorie.resx">
+    <EmbeddedResource Include="Form\Modifier_Détruire_Catégorie.resx">
       <DependentUpon>Modifier_Détruire_Catégorie.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modifier_Détruire_Cocktail.resx">
+    <EmbeddedResource Include="Form\Modifier_Détruire_Cocktail.resx">
       <DependentUpon>Modifier_Détruire_Cocktail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frm_add_see_cocktail_ingredients.resx">
+      <DependentUpon>frm_add_see_cocktail_ingredients.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

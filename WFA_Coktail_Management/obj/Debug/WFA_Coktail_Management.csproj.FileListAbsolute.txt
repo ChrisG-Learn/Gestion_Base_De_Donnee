@@ -26,3 +26,6 @@ C:\Users\Regis\Documents\GitHub\Gestion de base de donnée\Gestion_Base_De_Donne
 C:\Users\Regis\Documents\GitHub\Gestion de base de donnée\Gestion_Base_De_Donnee\WFA_Coktail_Management\obj\Debug\WFA_Coktail_Management.csproj.CoreCompileInputs.cache
 C:\Users\Regis\Documents\GitHub\Gestion de base de donnée\Gestion_Base_De_Donnee\WFA_Coktail_Management\obj\Debug\WFA_Coktail_Management.exe
 C:\Users\Regis\Documents\GitHub\Gestion de base de donnée\Gestion_Base_De_Donnee\WFA_Coktail_Management\obj\Debug\WFA_Coktail_Management.pdb
+C:\Users\Regis\Documents\GitHub\Gestion de base de donnée\Gestion_Base_De_Donnee\WFA_Coktail_Management\obj\Debug\WFA_Coktail_Management.IngredientPourCocktails.resources
+C:\Users\Regis\Documents\GitHub\Gestion de base de donnée\Gestion_Base_De_Donnee\WFA_Coktail_Management\obj\Debug\WFA_Coktail_Management.Les_catégorie_et_leur_cocktails.resources
+C:\Users\Regis\Documents\GitHub\Gestion de base de donnée\Gestion_Base_De_Donnee\WFA_Coktail_Management\obj\Debug\WFA_Coktail_Management.frm_add_see_cocktail_ingredients.resources
