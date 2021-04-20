@@ -142,6 +142,5 @@ namespace WFA_Coktail_Management
                 sqlCommand.ExecuteNonQuery();
             }
         }
-
     }
 }

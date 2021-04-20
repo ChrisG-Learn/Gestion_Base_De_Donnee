@@ -63,5 +63,51 @@ namespace WFA_Coktail_Management
             }
             cmb.DropDownStyle = ComboBoxStyle.DropDownList;
         }
+
+        public void fill_dgv_category(DataGridView dataGridView)
+        {
+            DB_Manager db_Manager = new DB_Manager();
+            BindingSource Bs = new BindingSource();
+            string choice = "Category";
+            using (SqlDataReader Dr = db_Manager.list_Cocktail_Category(choice))
+            {
+                Bs.DataSource = Dr;
+                dataGridView.DataSource = Bs;
+            }
+            dataGridView.RowHeadersVisible = false;
+            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView.Columns["category_Id"].Visible = false;
+        }
+
+        public void fill_dgv_ingredients(DataGridView dataGridView)
+        {
+            DB_Manager db_Manager = new DB_Manager();
+            BindingSource Bs = new BindingSource();
+            string choice = "Ingredients";
+            using (SqlDataReader Dr = db_Manager.list_Cocktail_Category(choice))
+            {
+                Bs.DataSource = Dr;
+                dataGridView.DataSource = Bs;
+            }
+            dataGridView.RowHeadersVisible = false;
+            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView.Columns["ID_ingredient"].Visible = false;
+        }
+
+        public void fill_dgv_cocktail(DataGridView dataGridView)
+        {
+            DB_Manager db_Manager = new DB_Manager();
+            BindingSource Bs = new BindingSource();
+            string choice = "Cocktail";
+            using (SqlDataReader Dr = db_Manager.list_Cocktail_Category(choice))
+            {
+                Bs.DataSource = Dr;
+                dataGridView.DataSource = Bs;
+            }
+            dataGridView.RowHeadersVisible = false;
+            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView.Columns["cocktail_Id"].Visible = false;
+            dataGridView.Columns["category_Id"].Visible = false;
+        }
     }
 }
