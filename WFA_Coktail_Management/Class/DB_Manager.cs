@@ -53,12 +53,12 @@ namespace WFA_Coktail_Management
             SqlDataReader sqlDatareader;
             string sql;
             if (choice == "Cocktail")
-                sql = "SELECT cocktail_Id, cocktail_name AS 'info', difficulty_level, quotation, category_Id FROM tbl_cocktail ORDER BY cocktail_name";
+                sql = "SELECT cocktail_Id, cocktail_name, difficulty_level, quotation, category_Id FROM tbl_cocktail ORDER BY cocktail_name";
 
             else if (choice == "Ingredients")
-                sql = "SELECT ID_ingredient, ingredient_name AS 'info' FROM tbl_ingredients ORDER BY 'info'";
+                sql = "SELECT ID_ingredient, ingredient_name FROM tbl_ingredients ORDER BY ingredient_name";
             else
-                sql = "SELECT category_Id, category AS 'info' FROM tbl_category ORDER BY category";
+                sql = "SELECT category_Id, category FROM tbl_category ORDER BY category";
             SqlCommand sqlCommand = new SqlCommand(sql, sqlConnection);
             sqlConnection.Open();
             sqlDatareader = sqlCommand.ExecuteReader(CommandBehavior.CloseConnection);
@@ -73,6 +73,8 @@ namespace WFA_Coktail_Management
             string sql;
             if (choice == "Cocktail")
                 sql = "SELECT cocktail_name, difficulty_level, quotation, category_Id, cocktail_Id FROM  tbl_cocktail WHERE cocktail_ID = " + ID;
+            else if (choice == "link_category_cocktail")
+                sql = "SELECT cocktail_Id, cocktail_name, difficulty_level, quotation, category_Id FROM tbl_cocktail WHERE category_Id = " + ID;
             else
                 sql = "SELECT category_Id, category FROM tbl_category WHERE category_Id = " + ID;
             SqlCommand sqlCommand = new SqlCommand(sql, sqlConnection);

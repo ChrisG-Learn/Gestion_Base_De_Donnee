@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace WFA_Coktail_Management
 {
@@ -31,10 +32,34 @@ namespace WFA_Coktail_Management
             utility.fill_dgv_cocktail(dgv_cocktail);
         }
 
-        private void dgv_cocktail_Click(object sender, EventArgs e)
+        private void fill_dgv_cocktail_recherche(int category_id)
         {
-            dgv_cocktail.CurrentRow.Selected = true;
-            int cocktail_id = Convert.ToInt32(dgv_cocktail[0, dgv_cocktail.CurrentRow.Index].Value);
+            DB_Manager db_Manager = new DB_Manager();
+            BindingSource Bs = new BindingSource();
+            
+                using (SqlDataReader Dr = db_Manager.get_Information(category_id, "link_category_cocktail"))
+                {
+                    Bs.DataSource = Dr;
+                    if (Bs.Count > 1)
+                    {
+                        dgv_cocktail.DataSource = Bs;
+                    }
+                    else
+                        MessageBox.Show("No cocktail with this category");
+                }
+                dgv_cocktail.RowHeadersVisible = false;
+                dgv_cocktail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void dgv_category_Click(object sender, EventArgs e)
+        {
+            dgv_category.CurrentRow.Selected = true;
+            int category_id = Convert.ToInt32(dgv_category[0, dgv_category.CurrentRow.Index].Value);
+            if (dgv_cocktail.Rows.Count > 0)
+            {
+                dgv_cocktail.Rows.Clear();
+            }
+            fill_dgv_cocktail_recherche(category_id);           
         }
     }
 }

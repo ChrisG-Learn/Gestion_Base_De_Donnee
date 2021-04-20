@@ -21,7 +21,7 @@ namespace WFA_Coktail_Management
             {
                 Bs.DataSource = Dr;
                 cmb.ValueMember = "category_Id";
-                cmb.DisplayMember = "info";
+                cmb.DisplayMember = "category";
                 cmb.DataSource = Bs;
             }
             cmb.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -36,7 +36,7 @@ namespace WFA_Coktail_Management
             {
                 bindingSource.DataSource = sqlDataReader;
                 cmb.ValueMember = "cocktail_Id";
-                cmb.DisplayMember = "info";
+                cmb.DisplayMember = "cocktail_name";
                 cmb.DataSource = bindingSource;
             }
             cmb.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -58,7 +58,7 @@ namespace WFA_Coktail_Management
             {
                 Bs.DataSource = Dr;
                 cmb.ValueMember = "ID_ingredient";
-                cmb.DisplayMember = "info";
+                cmb.DisplayMember = "ingredient_name";
                 cmb.DataSource = Bs;
             }
             cmb.DropDownStyle = ComboBoxStyle.DropDownList;

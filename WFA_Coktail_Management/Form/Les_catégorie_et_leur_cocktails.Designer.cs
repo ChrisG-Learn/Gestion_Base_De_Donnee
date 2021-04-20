@@ -74,6 +74,7 @@ namespace WFA_Coktail_Management
             this.dgv_category.RowTemplate.Height = 24;
             this.dgv_category.Size = new System.Drawing.Size(564, 165);
             this.dgv_category.TabIndex = 2;
+            this.dgv_category.Click += new System.EventHandler(this.dgv_category_Click);
             // 
             // dgv_cocktail
             // 
@@ -88,7 +89,6 @@ namespace WFA_Coktail_Management
             this.dgv_cocktail.RowTemplate.Height = 24;
             this.dgv_cocktail.Size = new System.Drawing.Size(564, 165);
             this.dgv_cocktail.TabIndex = 3;
-            this.dgv_cocktail.Click += new System.EventHandler(this.dgv_cocktail_Click);
             // 
             // Les_catégorie_et_leur_cocktails
             // 
