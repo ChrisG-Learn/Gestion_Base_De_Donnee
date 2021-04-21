@@ -33,18 +33,20 @@ namespace WFA_Coktail_Management
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmb_ingredients = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_cocktailParIngredient = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_cocktailParIngredient)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cmb_ingredients);
-            this.groupBox1.Location = new System.Drawing.Point(13, 28);
+            this.groupBox1.Location = new System.Drawing.Point(17, 34);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 52);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(267, 64);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Recherche ingredient";
@@ -52,44 +54,52 @@ namespace WFA_Coktail_Management
             // cmb_ingredients
             // 
             this.cmb_ingredients.FormattingEnabled = true;
-            this.cmb_ingredients.Location = new System.Drawing.Point(7, 20);
+            this.cmb_ingredients.Location = new System.Drawing.Point(9, 25);
+            this.cmb_ingredients.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmb_ingredients.Name = "cmb_ingredients";
-            this.cmb_ingredients.Size = new System.Drawing.Size(187, 21);
+            this.cmb_ingredients.Size = new System.Drawing.Size(248, 24);
             this.cmb_ingredients.TabIndex = 0;
+            this.cmb_ingredients.SelectedIndexChanged += new System.EventHandler(this.cmb_ingredients_SelectedIndexChanged);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Location = new System.Drawing.Point(13, 87);
+            this.groupBox2.Controls.Add(this.dgv_cocktailParIngredient);
+            this.groupBox2.Location = new System.Drawing.Point(17, 107);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(570, 351);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(760, 432);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cocktail";
             // 
-            // dataGridView1
+            // dgv_cocktailParIngredient
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Blue;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 20);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(557, 325);
-            this.dataGridView1.TabIndex = 0;
+            this.dgv_cocktailParIngredient.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_cocktailParIngredient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_cocktailParIngredient.Location = new System.Drawing.Point(9, 25);
+            this.dgv_cocktailParIngredient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_cocktailParIngredient.Name = "dgv_cocktailParIngredient";
+            this.dgv_cocktailParIngredient.RowHeadersWidth = 51;
+            this.dgv_cocktailParIngredient.Size = new System.Drawing.Size(743, 400);
+            this.dgv_cocktailParIngredient.TabIndex = 0;
+            this.dgv_cocktailParIngredient.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // IngredientPourCocktails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "IngredientPourCocktails";
             this.Text = "IngredientPourCocktails";
             this.Load += new System.EventHandler(this.IngredientPourCocktails_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_cocktailParIngredient)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -99,6 +109,6 @@ namespace WFA_Coktail_Management
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cmb_ingredients;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_cocktailParIngredient;
     }
 }
