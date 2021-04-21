@@ -20,7 +20,20 @@ namespace WFA_Coktail_Management
 
         private void IngredientPourCocktails_Load(object sender, EventArgs e)
         {
-            Utility.Fill_CmbIngredients(cmb_ingredients);
+            Utility utility = new Utility();
+            utility.Fill_CmbIngredients(cmb_ingredients);
+            dgv_cocktailParIngredient.ReadOnly = true;
+            utility.fill_dgv_cocktail(dgv_cocktailParIngredient);
         }
+
+        private void cmb_ingredients_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
     }
 }

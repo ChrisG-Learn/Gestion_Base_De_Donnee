@@ -61,5 +61,10 @@ namespace WFA_Coktail_Management
             }
             fill_dgv_cocktail_recherche(category_id);           
         }
+
+        private void dgv_category_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
