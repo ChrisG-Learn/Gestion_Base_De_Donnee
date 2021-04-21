@@ -75,6 +75,8 @@ namespace WFA_Coktail_Management
                 sql = "SELECT cocktail_name, difficulty_level, quotation, category_Id, cocktail_Id FROM  tbl_cocktail WHERE cocktail_ID = " + ID;
             else if (choice == "link_category_cocktail")
                 sql = "SELECT cocktail_Id, cocktail_name, difficulty_level, quotation, category_Id FROM tbl_cocktail WHERE category_Id = " + ID;
+            else if (choice == "link_cocktail_ingredient")
+                sql = "SELECT tbl_ingredients.ingredient_name, bridge_ingredient_cocktail.Quantity FROM bridge_ingredient_cocktail INNER JOIN tbl_cocktail ON bridge_ingredient_cocktail.cocktail_Id = tbl_cocktail.cocktail_Id INNER JOIN tbl_ingredients ON bridge_ingredient_cocktail.ID_ingredient = tbl_ingredients.ID_ingredient WHERE tbl_cocktail.cocktail_Id = " + ID;
             else
                 sql = "SELECT category_Id, category FROM tbl_category WHERE category_Id = " + ID;
             SqlCommand sqlCommand = new SqlCommand(sql, sqlConnection);

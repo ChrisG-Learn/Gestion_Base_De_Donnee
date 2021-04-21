@@ -33,7 +33,7 @@
             this.cmb_cocktail = new System.Windows.Forms.ComboBox();
             this.cmb_ingredients_list = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_ingredient = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btn_add_ingredient = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -41,7 +41,7 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ingredient)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +74,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.dgv_ingredient);
             this.groupBox2.Location = new System.Drawing.Point(13, 73);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(292, 219);
@@ -82,15 +82,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ingredient And Quantity";
             // 
-            // dataGridView1
+            // dgv_ingredient
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 20);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(280, 193);
-            this.dataGridView1.TabIndex = 0;
+            this.dgv_ingredient.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_ingredient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ingredient.Location = new System.Drawing.Point(6, 20);
+            this.dgv_ingredient.Name = "dgv_ingredient";
+            this.dgv_ingredient.Size = new System.Drawing.Size(280, 193);
+            this.dgv_ingredient.TabIndex = 0;
             // 
             // groupBox3
             // 
@@ -149,7 +149,7 @@
             this.Load += new System.EventHandler(this.frm_add_see_cocktail_ingredients_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ingredient)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -164,7 +164,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_ingredient;
         private System.Windows.Forms.Button btn_add_ingredient;
         private System.Windows.Forms.ComboBox cmb_cocktail_list;
         private System.Windows.Forms.ComboBox comboBox2;
