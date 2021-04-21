@@ -23,32 +23,35 @@ namespace WFA_Coktail_Management
         {
             Utility utility = new Utility();
             utility.Fill_CmbIngredients(cmb_ingredients);
-            dgv_cocktailParIngredient.ReadOnly = true;
             utility.fill_dgv_cocktail(dgv_cocktailParIngredient);
+            dgv_cocktailParIngredient.Rows.Clear();
+            
         }
 
         private void fillDgv_Ingredient_reserched(int id)
         {
             DB_Manager db_Manager = new DB_Manager();
             BindingSource Bs = new BindingSource();
-
-            using (SqlDataReader Dr = db_Manager.get_Information(id, "LinkIngredient"))
+            string choice = "LinkIngredient";
+            using (SqlDataReader Dr = db_Manager.get_Information(id, choice))
             {
                 Bs.DataSource = Dr;
-                if (Bs.Count > 1)
+                if (Bs.Count >= 1)
                 {
                     dgv_cocktailParIngredient.DataSource = Bs;
                 }
                 else
-                    MessageBox.Show("No cocktails whit this ingredient");
+                    MessageBox.Show("No cocktail");
             }
             dgv_cocktailParIngredient.RowHeadersVisible = false;
             dgv_cocktailParIngredient.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv_cocktailParIngredient.ReadOnly = true;
         }
 
         private void cmb_ingredients_SelectedIndexChanged(object sender, EventArgs e)
         {
             int Id = Convert.ToInt32(cmb_ingredients.SelectedValue);
+            dgv_cocktailParIngredient.Rows.Clear();
             fillDgv_Ingredient_reserched(Id);
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

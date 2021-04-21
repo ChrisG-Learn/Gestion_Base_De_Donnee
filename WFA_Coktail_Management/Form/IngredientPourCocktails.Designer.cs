@@ -29,7 +29,7 @@ namespace WFA_Coktail_Management
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmb_ingredients = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -42,11 +42,9 @@ namespace WFA_Coktail_Management
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cmb_ingredients);
-            this.groupBox1.Location = new System.Drawing.Point(17, 34);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(13, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(267, 64);
+            this.groupBox1.Size = new System.Drawing.Size(200, 52);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Recherche ingredient";
@@ -54,46 +52,41 @@ namespace WFA_Coktail_Management
             // cmb_ingredients
             // 
             this.cmb_ingredients.FormattingEnabled = true;
-            this.cmb_ingredients.Location = new System.Drawing.Point(9, 25);
-            this.cmb_ingredients.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_ingredients.Location = new System.Drawing.Point(7, 20);
             this.cmb_ingredients.Name = "cmb_ingredients";
-            this.cmb_ingredients.Size = new System.Drawing.Size(248, 24);
+            this.cmb_ingredients.Size = new System.Drawing.Size(187, 21);
             this.cmb_ingredients.TabIndex = 0;
-            this.cmb_ingredients.SelectedIndexChanged += new System.EventHandler(this.cmb_ingredients_SelectedIndexChanged);
+            this.cmb_ingredients.SelectionChangeCommitted += new System.EventHandler(this.cmb_ingredients_SelectedIndexChanged);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgv_cocktailParIngredient);
-            this.groupBox2.Location = new System.Drawing.Point(17, 107);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(13, 87);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(760, 432);
+            this.groupBox2.Size = new System.Drawing.Size(570, 351);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cocktail";
             // 
             // dgv_cocktailParIngredient
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Blue;
-            this.dgv_cocktailParIngredient.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Blue;
+            this.dgv_cocktailParIngredient.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_cocktailParIngredient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_cocktailParIngredient.Location = new System.Drawing.Point(9, 25);
-            this.dgv_cocktailParIngredient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_cocktailParIngredient.Location = new System.Drawing.Point(7, 20);
             this.dgv_cocktailParIngredient.Name = "dgv_cocktailParIngredient";
             this.dgv_cocktailParIngredient.RowHeadersWidth = 51;
-            this.dgv_cocktailParIngredient.Size = new System.Drawing.Size(743, 400);
+            this.dgv_cocktailParIngredient.Size = new System.Drawing.Size(557, 325);
             this.dgv_cocktailParIngredient.TabIndex = 0;
             this.dgv_cocktailParIngredient.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // IngredientPourCocktails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "IngredientPourCocktails";
             this.Text = "IngredientPourCocktails";
             this.Load += new System.EventHandler(this.IngredientPourCocktails_Load);
