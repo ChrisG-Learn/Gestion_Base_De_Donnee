@@ -32,7 +32,7 @@ namespace WFA_Coktail_Management
             DB_Manager db_Manager = new DB_Manager();
             BindingSource Bs = new BindingSource();
 
-            using (SqlDataReader Dr = db_Manager.
+            using (SqlDataReader Dr = db_Manager.get_Information(id, "LinkIngredient"))
             {
                 Bs.DataSource = Dr;
                 if (Bs.Count > 1)
