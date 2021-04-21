@@ -24,5 +24,10 @@ namespace WFA_Coktail_Management
             Utility.fill_CmbCocktail(cmb_cocktail);
             Utility.Fill_CmbIngredients(cmb_ingredients_list);
         }
+
+        private void cmb_cocktail_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int cocktail_id = Convert.ToInt32(cmb_cocktail.SelectedValue);
+        }
     }
 }

@@ -62,6 +62,7 @@
             this.cmb_cocktail.Name = "cmb_cocktail";
             this.cmb_cocktail.Size = new System.Drawing.Size(215, 21);
             this.cmb_cocktail.TabIndex = 0;
+            this.cmb_cocktail.SelectedIndexChanged += new System.EventHandler(this.cmb_cocktail_SelectedIndexChanged);
             // 
             // cmb_ingredients_list
             // 
