@@ -64,6 +64,21 @@ namespace WFA_Coktail_Management
             cmb.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
+
+        public void Fill_Cmb_not_in_ingredient(ComboBox cmb, int cocktail_id)
+        {
+            DB_Manager db_Manager = new DB_Manager();
+            BindingSource Bs = new BindingSource();
+            using (SqlDataReader Dr = db_Manager.list_ingredient_not_use(cocktail_id))
+            {
+                Bs.DataSource = Dr;
+                cmb.ValueMember = "ID_ingredient";
+                cmb.DisplayMember = "ingredient_name";
+                cmb.DataSource = Bs;
+            }
+            cmb.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+
         public void fill_dgv_category(DataGridView dataGridView)
         {
             DB_Manager db_Manager = new DB_Manager();

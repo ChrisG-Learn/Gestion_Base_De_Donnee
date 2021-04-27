@@ -14,6 +14,7 @@ namespace WFA_Coktail_Management
     public partial class frm_add_see_cocktail_ingredients : Form
     {
         Utility Utility = new Utility();
+        int cocktail_id;
 
         public frm_add_see_cocktail_ingredients()
         {
@@ -22,8 +23,16 @@ namespace WFA_Coktail_Management
 
         private void frm_add_see_cocktail_ingredients_Load(object sender, EventArgs e)
         {
+            refresh();
+        }
+
+        private void refresh()
+        {
             Utility.fill_CmbCocktail(cmb_cocktail);
             Utility.Fill_CmbIngredients(cmb_ingredients_list);
+            cmb_ingredients_list.Enabled = false;
+            btn_add_ingredient.Enabled = false;
+            txt_quantity.Enabled = false;
             dgv_ingredient.ReadOnly = true;
         }
 
@@ -34,8 +43,11 @@ namespace WFA_Coktail_Management
             string choice = "link_cocktail_ingredient";
             using (SqlDataReader Dr = db_Manager.get_Information(cocktail_id, choice))
             {
-                Bs.DataSource = Dr;
-                dgv_ingredient.DataSource = Bs;
+                if (Dr.HasRows)
+                {
+                    Bs.DataSource = Dr;
+                    dgv_ingredient.DataSource = Bs;
+                }
             }
             dgv_ingredient.RowHeadersVisible = false;
             dgv_ingredient.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -43,8 +55,20 @@ namespace WFA_Coktail_Management
 
         private void cmb_cocktail_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int cocktail_id = Convert.ToInt32(cmb_cocktail.SelectedValue);
+            cocktail_id = Convert.ToInt32(cmb_cocktail.SelectedValue);
             fill_dgv_ingredient(cocktail_id);
+            Utility.Fill_Cmb_not_in_ingredient(cmb_ingredients_list, cocktail_id);
+            cmb_ingredients_list.Enabled = true;
+            btn_add_ingredient.Enabled = true;
+            txt_quantity.Enabled = true;
+        }
+
+        private void btn_add_ingredient_Click(object sender, EventArgs e)
+        {
+            DB_Manager dB_Manager = new DB_Manager();
+            dB_Manager.add_ingredient(cocktail_id, Convert.ToInt32(cmb_ingredients_list.SelectedValue), int.Parse(txt_quantity.Text));
+            txt_quantity.Clear();
+            refresh();
         }
     }
 }

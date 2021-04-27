@@ -149,5 +149,36 @@ namespace WFA_Coktail_Management
                 sqlCommand.ExecuteNonQuery();
             }
         }
+
+        public SqlDataReader list_ingredient_not_use(int cocktail_id)
+        {
+            SqlConnection sqlConnection = getConnection();
+            string sql = "list_not_in_cokctail_ingredient";
+            SqlCommand sqlCommand = new SqlCommand(sql, sqlConnection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+            sqlCommand.Parameters.Add("@coctail_ID", SqlDbType.Int);
+            sqlCommand.Parameters["@coctail_ID"].Value = cocktail_id;
+            sqlConnection.Open();
+            SqlDataReader dataReader = sqlCommand.ExecuteReader(CommandBehavior.CloseConnection);
+            return dataReader; 
+        }
+
+        public void add_ingredient(int cocktail_id, int ingredient_id, int quantity = 0)
+        {
+            using (SqlConnection sqlConnection = getConnection())
+            {
+                string sql = "ADD_INGREDIENT";
+                SqlCommand sqlCommand = new SqlCommand(sql, sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.Add("@COCKTAIL_ID", SqlDbType.Int);
+                sqlCommand.Parameters["@COCKTAIL_ID"].Value = cocktail_id;
+                sqlCommand.Parameters.Add("@ID_INGREDIENT", SqlDbType.Int);
+                sqlCommand.Parameters["@ID_INGREDIENT"].Value = cocktail_id;
+                sqlCommand.Parameters.Add("@QUANTITY", SqlDbType.Int);
+                sqlCommand.Parameters["@QUANTITY"].Value = cocktail_id;
+                sqlConnection.Open();
+                sqlCommand.ExecuteNonQuery();
+            }
+        }
     }
 }
