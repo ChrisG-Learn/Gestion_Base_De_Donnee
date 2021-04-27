@@ -36,19 +36,17 @@ namespace WFA_Coktail_Management
         {
             DB_Manager db_Manager = new DB_Manager();
             BindingSource Bs = new BindingSource();
-            
-                using (SqlDataReader Dr = db_Manager.get_Information(category_id, "link_category_cocktail"))
+
+            using (SqlDataReader Dr = db_Manager.get_Information(category_id, "link_category_cocktail"))
+            {
+                if (Dr.HasRows)
                 {
                     Bs.DataSource = Dr;
-                    if (Bs.Count > 1)
-                    {
-                        dgv_cocktail.DataSource = Bs;
-                    }
-                    else
-                        MessageBox.Show("No cocktail with this category");
+                    dgv_cocktail.DataSource = Bs;
                 }
-                dgv_cocktail.RowHeadersVisible = false;
-                dgv_cocktail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+            dgv_cocktail.RowHeadersVisible = false;
+            dgv_cocktail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void dgv_category_Click(object sender, EventArgs e)

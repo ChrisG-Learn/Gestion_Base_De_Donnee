@@ -23,6 +23,7 @@ namespace WFA_Coktail_Management
         {
             Utility utility = new Utility();
             utility.Fill_CmbIngredients(cmb_ingredients);
+            fill
             utility.fill_dgv_cocktail(dgv_cocktailParIngredient);
             dgv_cocktailParIngredient.Rows.Clear();
             
@@ -35,13 +36,11 @@ namespace WFA_Coktail_Management
             string choice = "LinkIngredient";
             using (SqlDataReader Dr = db_Manager.get_Information(id, choice))
             {
-                Bs.DataSource = Dr;
-                if (Bs.Count >= 1)
+                if (Dr.HasRows)
                 {
+                    Bs.DataSource = Dr;
                     dgv_cocktailParIngredient.DataSource = Bs;
                 }
-                else
-                    MessageBox.Show("No cocktail");
             }
             dgv_cocktailParIngredient.RowHeadersVisible = false;
             dgv_cocktailParIngredient.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;

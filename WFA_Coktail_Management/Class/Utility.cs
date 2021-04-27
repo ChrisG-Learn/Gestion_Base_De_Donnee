@@ -86,8 +86,11 @@ namespace WFA_Coktail_Management
             string choice = "Category";
             using (SqlDataReader Dr = db_Manager.list_Cocktail_Category(choice))
             {
-                Bs.DataSource = Dr;
-                dataGridView.DataSource = Bs;
+                if (Dr.HasRows) 
+                {
+                    Bs.DataSource = Dr;
+                    dataGridView.DataSource = Bs;
+                }
             }
             dataGridView.RowHeadersVisible = false;
             dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -101,8 +104,11 @@ namespace WFA_Coktail_Management
             string choice = "Ingredients";
             using (SqlDataReader Dr = db_Manager.list_Cocktail_Category(choice))
             {
-                Bs.DataSource = Dr;
-                dataGridView.DataSource = Bs;
+                if (Dr.HasRows)
+                {
+                    Bs.DataSource = Dr;
+                    dataGridView.DataSource = Bs;
+                }
             }
             dataGridView.RowHeadersVisible = false;
             dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -116,8 +122,11 @@ namespace WFA_Coktail_Management
             string choice = "Cocktail";
             using (SqlDataReader Dr = db_Manager.list_Cocktail_Category(choice))
             {
-                Bs.DataSource = Dr;
-                dataGridView.DataSource = Bs;
+                if (Dr.HasRows)
+                {
+                    Bs.DataSource = Dr;
+                    dataGridView.DataSource = Bs;
+                }
             }
             dataGridView.RowHeadersVisible = false;
             dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
