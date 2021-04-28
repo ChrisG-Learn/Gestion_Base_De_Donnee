@@ -33,6 +33,7 @@ namespace WFA_Coktail_Management
             cmb_ingredients_list.Enabled = false;
             btn_add_ingredient.Enabled = false;
             txt_quantity.Enabled = false;
+            txt_quantity.Text = "0";
             dgv_ingredient.ReadOnly = true;
         }
 
